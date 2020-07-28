@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ua">
 <head>
-    <meta charset="utf-8"/>
+    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Cpl</title>
     <!--fonts-->
@@ -41,7 +41,6 @@
                     <li class="menu__item">
                         <a href="#" class="menu__link">Де купити</a>
                     </li>
-
                 </ul>
                 <div class="lang-dropdown">
                     <div class="dropbtn">UA <span class="icon"></span></div>
@@ -64,8 +63,8 @@
     <main class="main">
         <section class="section-banner mouse-parallax">
 
-            <!--<div class="mouse-parallax__bg"></div>-->
-            <!--<div class="mouse-parallax__bg-2"></div>-->
+            <div class="mouse-parallax__bg"></div>
+            <div class="mouse-parallax__bg-2"></div>
             <div class="mouse-parallax__content">
                 <div class="container">
                     <div class="left-content">
@@ -79,40 +78,46 @@
                                 class="registered">&reg;</sup></span><br>
                             Викинь біль із голови!
                         </h1>
-                        <ul class="advantage-list">
-                            <li class="advantage-list__item">
-                                <div class="advantage">
-                                    <div class="substrate substrate_blue">
-                                        <div class="wrap-icon" style="background-image: url(assets/img/man.png);"></div>
+
+                        <div class="swiper-container advantage-list banner-slider">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide advantage-list__item">
+                                    <div class="advantage">
+                                        <div class="substrate substrate_blue">
+                                            <div class="wrap-icon"
+                                                 style="background-image: url(assets/img/man.png);"></div>
+                                        </div>
+                                    </div>
+                                    <div class="advantage-list__text">
+                                        Ефективний проти головного болю
                                     </div>
                                 </div>
-                                <div class="advantage-list__text">
-                                    Ефективний проти головного болю
-                                </div>
-                            </li>
-                            <li class="advantage-list__item">
-                                <div class="advantage">
-                                    <div class="substrate substrate_purlpe">
-                                        <div class="wrap-icon"
-                                             style="background-image: url(assets/img/fire.png);"></div>
+
+                                <div class="swiper-slide advantage-list__item">
+                                    <div class="advantage">
+                                        <div class="substrate substrate_purlpe">
+                                            <div class="wrap-icon"
+                                                 style="background-image: url(assets/img/fire.png);"></div>
+                                        </div>
+                                    </div>
+                                    <div class="advantage-list__text">
+                                        поєднує три активні компоненти, що посилюють дію один одного
                                     </div>
                                 </div>
-                                <div class="advantage-list__text">
-                                    поєднує три активні компоненти, що посилюють дію один одного
-                                </div>
-                            </li>
-                            <li class="advantage-list__item">
-                                <div class="advantage">
-                                    <div class="substrate substrate_orange">
-                                        <div class="wrap-icon"
-                                             style="background-image: url(assets/img/clock.png);"></div>
+
+                                <div class="swiper-slide advantage-list__item">
+                                    <div class="advantage">
+                                        <div class="substrate substrate_orange">
+                                            <div class="wrap-icon"
+                                                 style="background-image: url(assets/img/clock.png);"></div>
+                                        </div>
+                                    </div>
+                                    <div class="advantage-list__text">
+                                        починає знеболювання вже через 30-60 хвилин
                                     </div>
                                 </div>
-                                <div class="advantage-list__text">
-                                    починає знеболювання вже через 30-60 хвилин
-                                </div>
-                            </li>
-                        </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -177,47 +182,38 @@
                                     class="registered">&reg;</sup></span>
                             </h2>
                         </div>
-                        <ul class="images-list">
+                        <ul class="images-list" id="pain-syndrom-imgs">
                             <li class="images-list__item">
-                                <a href="#" class="link-syndrom wrap-img">
-                                    <img src="assets/img/dysmenorrhea.jpg" alt="дисменорея"
+                                <a href="#" class="link-syndrom wrap-img active" data-for=migren"">
+                                    <img src="assets/img/dysmenorrhea.jpg" alt="migren"
                                          class="img images-list__img">
-                                    <div class="overlay"></div>
                                 </a>
                             </li>
                             <li class="images-list__item">
-                                <a href="#" class="link-syndrom wrap-img">
+                                <a href="#" class="link-syndrom wrap-img" data-for="atralgia">
                                     <img src="assets/img/hand.jpg" alt="артралгія" class="img images-list__img">
-                                    <div class="overlay"></div>
                                 </a>
-
                             </li>
                             <li class="images-list__item">
-                                <a href="#" class="link-syndrom wrap-img">
+                                <a href="#" class="link-syndrom wrap-img" data-for="toothache">
                                     <img src="assets/img/toothache.jpg" alt="зубний біль" class="img images-list__img">
-                                    <div class="overlay"></div>
                                 </a>
                             </li>
                             <li class="images-list__item">
-                                <a href="#" class="link-syndrom wrap-img">
+                                <a href="#" class="link-syndrom wrap-img" data-for="dysmenorrhea">
                                     <img src="assets/img/dysmenorrhea.jpg" alt="мігрень" class="img images-list__img">
-                                    <div class="overlay"></div>
                                 </a>
-
                             </li>
                             <li class="images-list__item">
-                                <a href="#" class="link-syndrom wrap-img">
+                                <a href="#" class="link-syndrom wrap-img" data-for="headache">
                                     <img src="assets/img/dysmenorrhea.jpg" alt="головний біль"
                                          class="img images-list__img">
-                                    <div class="overlay"></div>
                                 </a>
                             </li>
                             <li class="images-list__item">
-                                <a href="#" class="link-syndrom wrap-img">
+                                <a href="#" class="link-syndrom wrap-img" data-for="nevralgia">
                                     <img src="assets/img/nevralgiya.jpg" alt="невралгії" class="img images-list__img">
-                                    <div class="overlay"></div>
                                 </a>
-
                             </li>
                         </ul>
                     </div>
@@ -227,12 +223,15 @@
                         КОПАЦИЛ® полегшує слабкий або помірно виражений больовий синдром:
                     </div>
                     <ul class="pain-syndrome-list">
-                        <li class="pain-syndrome-list__item active-syndrom"><p class="syndrom">Мігрень</p></li>
-                        <li class="pain-syndrome-list__item"><p class="syndrom">Невралгії</p></li>
-                        <li class="pain-syndrome-list__item"><p class="syndrom">Зубний біль</p></li>
-                        <li class="pain-syndrome-list__item"><p class="syndrom">Артралгія</p></li>
-                        <li class="pain-syndrome-list__item"><p class="syndrom">Головний біль</p></li>
-                        <li class="pain-syndrome-list__item"><p class="syndrom">Первинна дисменорея</p></li>
+                        <li class="pain-syndrome-list__item active-syndrom" data-id="migren"><p class="syndrom">
+                            Мігрень</p></li>
+                        <li class="pain-syndrome-list__item" data-id="nevralgia"><p class="syndrom">Невралгії</p></li>
+                        <li class="pain-syndrome-list__item" data-id="toothache"><p class="syndrom">Зубний біль</p></li>
+                        <li class="pain-syndrome-list__item" data-id="atralgia"><p class="syndrom">Артралгія</p></li>
+                        <li class="pain-syndrome-list__item" data-id="headache"><p class="syndrom">Головний біль</p>
+                        </li>
+                        <li class="pain-syndrome-list__item" data-id="dysmenorrhea"><p class="syndrom">Первинна
+                            дисменорея</p></li>
                     </ul>
                     <p class="text_md section__text"><span class="medicament-name medicament-name_small">Копацил<sup
                             class="registered">&reg;</sup></span> можна застосовувати також як жарознижувальний засіб
@@ -251,46 +250,50 @@
                             class="registered registered_large">&reg;</sup></span>
                     </h2>
 
-                    <div class="take-list">
-
-                        <div class="take-card">
-                            <div class="take-card__top-content"
-                                 style="background-image: url(assets/img/taking-pills.png);">
-
+                    <div class="swiper-container take-list" id="instructionSlider">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="take-card">
+                                    <div class="take-card__top-content"
+                                         style="background-image: url(assets/img/taking-pills.png);">
+                                    </div>
+                                    <div class="take-card__body">
+                                        КОПАЦИЛ<sup class="registered">&reg;</sup> застосовують внутрішньо після їжі
+                                    </div>
+                                </div>
                             </div>
-                            <div class="take-card__body">
-                                КОПАЦИЛ<sup class="registered">&reg;</sup> застосовують внутрішньо після їжі
+                            <div class="swiper-slide">
+                                <div class="take-card">
+                                    <div class="take-card__top-content"
+                                         style="background-image: url(assets/img/za1.png);">
+                                    </div>
+                                    <div class="take-card__body">
+                                        По 1 таблетці КОПАЦИЛ<sup class="registered">&reg;</sup> <span
+                                            class="color-orange">2-3</span> рази на добу
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="take-card">
+                                    <div class="take-card__top-content"
+                                         style="background-image: url(assets/img/za6.png);">
+                                    </div>
+                                    <div class="take-card__body">
+                                        Максимальна добова доза – 6 таблеток (за 3 прийоми)
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="take-card">
+                                    <div class="take-card__top-content"
+                                         style="background-image: url(assets/img/za4a.png);">
+                                    </div>
+                                    <div class="take-card__body">
+                                        Інтервали між прийомами 4 години
+                                    </div>
+                                </div>
                             </div>
                         </div>
-
-                        <div class="take-card">
-                            <div class="take-card__top-content" style="background-image: url(assets/img/za1.png);">
-
-                            </div>
-                            <div class="take-card__body">
-                                По 1 таблетці КОПАЦИЛ<sup class="registered">&reg;</sup> <span
-                                    class="color-orange">2-3</span> рази на добу
-                            </div>
-                        </div>
-
-                        <div class="take-card">
-                            <div class="take-card__top-content" style="background-image: url(assets/img/za6.png);">
-
-                            </div>
-                            <div class="take-card__body">
-                                Максимальна добова доза – 6 таблеток (за 3 прийоми)
-                            </div>
-                        </div>
-
-                        <div class="take-card">
-                            <div class="take-card__top-content" style="background-image: url(assets/img/za4a.png);">
-
-                            </div>
-                            <div class="take-card__body">
-                                Інтервали між прийомами 4 години
-                            </div>
-                        </div>
-
                     </div>
                 </div>
             </div>
@@ -331,52 +334,59 @@
 
                 <h3 class="title color-gray">ВИДИ ГОЛОВНОГО БОЛЮ</h3>
 
-                <div class="types-headache">
-                    <div class="card-types">
-                        <div class="gradient-wrap">
-                            <div class="bg-card" style="background-image: url(assets/img/girl1.png);"></div>
+                <div class="swiper-container types-headache" id="headAcheTypesSlider">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="card-types">
+                                <div class="gradient-wrap">
+                                    <div class="bg-card" style="background-image: url(assets/img/girl1.png);"></div>
+                                </div>
+                                <div class="card-types__heading">
+                                    <h4 class="card-types__title color-orange">Головний біль напруги</h4>
+                                </div>
+                                <div class="card-types__body">
+                                    <p class="card-types__text">
+                                        Найпоширеніша форма головного болю у світі. Характерний для обох статей...
+                                    </p>
+                                    <a href="#" class="btn">Читати далі</a>
+                                </div>
+                            </div>
                         </div>
-                        <div class="card-types__heading">
-                            <h4 class="card-types__title color-orange">Головний біль напруги</h4>
+                        <div class="swiper-slide">
+                            <div class="card-types">
+                                <div class="gradient-wrap">
+                                    <div class="bg-card" style="background-image: url(assets/img/girl2.png);"></div>
+                                </div>
+                                <div class="card-types__heading">
+                                    <h4 class="card-types__title color-blue">Мігрень</h4>
+                                </div>
+                                <div class="card-types__body">
+                                    <p class="card-types__text">
+                                        Вдвічі частіше зустрічається у жінок. Найчастіше є однобічною, пульсуючою...
+                                    </p>
+                                    <a href="#" class="btn">Читати далі</a>
+                                </div>
+                            </div>
                         </div>
-                        <div class="card-types__body">
-                            <p class="card-types__text">
-                                Найпоширеніша форма головного болю у світі. Характерний для обох статей...
-                            </p>
-                            <a href="#" class="btn">Читати далі</a>
-                        </div>
-                    </div>
-
-                    <div class="card-types">
-                        <div class="gradient-wrap">
-                            <div class="bg-card" style="background-image: url(assets/img/girl2.png);"></div>
-                        </div>
-                        <div class="card-types__heading">
-                            <h4 class="card-types__title color-blue">Мігрень</h4>
-                        </div>
-                        <div class="card-types__body">
-                            <p class="card-types__text">
-                                Вдвічі частіше зустрічається у жінок. Найчастіше є однобічною, пульсуючою...
-                            </p>
-                            <a href="#" class="btn">Читати далі</a>
-                        </div>
-                    </div>
-
-                    <div class="card-types">
-                        <div class="gradient-wrap">
-                            <div class="bg-card" style="background-image: url(assets/img/boy.png);"></div>
-                        </div>
-                        <div class="card-types__heading">
-                            <h4 class="card-types__title color-violet">кластерний головний біль</h4>
-                        </div>
-                        <div class="card-types__body">
-                            <p class="card-types__text">
-                                Сильний біль, що частіше виникає у чоловіків віком 20-50 років. Він...
-                            </p>
-                            <a href="#" class="btn">Читати далі</a>
+                        <div class="swiper-slide">
+                            <div class="card-types">
+                                <div class="gradient-wrap">
+                                    <div class="bg-card" style="background-image: url(assets/img/boy.png);"></div>
+                                </div>
+                                <div class="card-types__heading">
+                                    <h4 class="card-types__title color-violet">кластерний головний біль</h4>
+                                </div>
+                                <div class="card-types__body">
+                                    <p class="card-types__text">
+                                        Сильний біль, що частіше виникає у чоловіків віком 20-50 років. Він...
+                                    </p>
+                                    <a href="#" class="btn">Читати далі</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
+
                 <p class="section__text color-gray">
                     Більшість видів головного болю не є наслідком серйозної хвороби, але деякі можуть сигналізувати про
                     небезпечний для життя стан, що потребує невідкладної допомоги. У такому випадку необхідно негайно

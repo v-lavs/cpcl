@@ -21,6 +21,18 @@
     margin-left: auto;
   }
 
+  .banner-slider {
+    .swiper-wrapper {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  .swiper-container-initialized {
+    .swiper-wrapper {
+      flex-direction: row;
+    }
+  }
 
   .advantage-list__item {
     display: flex;
@@ -90,14 +102,15 @@
     background-position: center center;
   }
 
-  .mouse-parallax__bg{
-    &:before{
+  .mouse-parallax__bg {
+    &:before {
       width: 32%;
       height: 52%;
       background-image: url(../assets/img/object4.png);
       background-position: right 0;
     }
-    &:after{
+
+    &:after {
       width: 12%;
       height: 30%;
       right: 5%;
@@ -105,22 +118,25 @@
       background-position: 0 0;
     }
   }
-  .mouse-parallax__bg-2{
+
+  .mouse-parallax__bg-2 {
     background-image: url(../assets/img/object5.png);
     background-repeat: no-repeat;
     -webkit-background-size: 17.5%;
     background-size: 17.5%;
     background-position: 30% 40%;
   }
-  .mouse-parallax__bg-2{
-    &:before{
-      top:13%;
+
+  .mouse-parallax__bg-2 {
+    &:before {
+      top: 13%;
       width: 10%;
       height: 38.5%;
       background-image: url(../assets/img/object2.png);
       background-position: right 0;
     }
-    &:after{
+
+    &:after {
       width: 5%;
       height: 33%;
       right: 5.5%;
