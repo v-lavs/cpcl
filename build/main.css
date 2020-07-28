@@ -817,16 +817,23 @@ body {
   top: 25%;
 }
 
+.section-information .section__text,
 .section-information .sub-title {
   margin: 0 auto 100px;
   max-width: 1200px;
+}
+
+.section-information .section__text {
+  color: #7b7b7b;
+  line-height: 1.3;
+  font-weight: 300;
 }
 
 .section-information .types-headache {
   display: flex;
   justify-content: space-between;
   width: 78.5%;
-  margin: 0 auto;
+  margin: 0 auto 55px;
 }
 
 .section-information .card-types {
