@@ -1,0 +1,138 @@
+
+.main-nav {
+  display: flex;
+
+  .menu {
+    display: flex;
+
+    &__item {
+      font-family: $primary-fonts;
+      font-size: 18px;
+      font-weight: 300;
+      color: $black;
+      line-height: 2;
+      margin-left: 30px;
+      margin-right: 30px;
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+
+  }
+
+  //----------
+
+
+  .btn-close {
+    position: absolute;
+    right: 35px;
+    top: 20px;
+    display: none;
+    width: 28px;
+    height: 28px;
+    background-color: transparent;
+    border: none;
+
+    .icon {
+      font-size: 24px;
+    }
+  }
+
+  .lang-dropdown {
+    position: relative;
+    display: inline-block;
+    font-family: $primary-fonts;
+    font-size: 18px;
+    font-weight: 300;
+    text-transform: uppercase;
+    transition: .5s;
+
+    &:hover .dropdown-content {
+      display: block;
+    }
+
+    .dropbtn {
+      position: relative;
+      display: block;
+      padding: 5px;
+
+      .icon {
+        position: relative;
+        display: inline-flex;
+        margin-left: 5px;
+        height: 10px;
+      }
+    }
+
+    .icon:before {
+      position: absolute;
+      content: '';
+      background-image: url(../assets/img/icons/download.svg);
+      background-repeat: no-repeat;
+      -webkit-background-size: contain;
+      background-size: contain;
+      background-position: center center;
+      height: 10px;
+      width: 10px;
+      display: block;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      top: 40px;
+      width: 50px;
+      z-index: 3;
+      background: #ffffff;
+      transition: .5s;
+      a {
+        padding: 5px;
+        text-decoration: none;
+        display: block;
+        border-bottom: 1px solid #999999;
+      }
+    }
+  }
+}
+
+
+@include respond-to($lg) {
+  .main-nav {
+    padding-top: 30px;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    max-width: 320px;
+    background-color: $white;
+    max-height: 100%;
+    overflow-y: auto;
+    text-align: left;
+    transition: transform .5s;
+    transform: translateX(-100%);
+    z-index: 999;
+
+    .menu__item {
+      margin: 0;
+      font-size: 21px;
+    }
+
+    &.open {
+      transform: translateX(0);
+    }
+
+    .menu {
+      flex-direction: column;
+      padding: 40px 20px;
+    }
+  }
+  .burger {
+    display: block !important;
+  }
+  .btn-close {
+    display: block !important;
+  }
+}
+

@@ -1,0 +1,148 @@
+.section-apply {
+  .container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .left-part,
+  .right-part {
+    width: 50%;
+  }
+  .left-part{
+    display: flex;
+  }
+  .right-part {
+    padding-left: 90px;
+  }
+  .content-left{
+    margin-left: auto;
+    max-width: 778px;
+    width: 100%;
+  }
+  .images-list {
+    margin-left: auto;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -8px;
+
+    &__item {
+      width: 33.3%;
+      padding: 0 8px;
+      margin-bottom: 22px;
+
+      .wrap-img {
+        display: block;
+        position: relative;
+        border: 2px solid #0097FF;
+        border-radius: 22px;
+        overflow: hidden;
+
+        &:hover {
+          box-shadow: 0 2px 65px 0 rgba(0, 68, 255, 0.4);
+
+          .overlay {
+            opacity: 0;
+          }
+        }
+      }
+    }
+  }
+
+  .overlay {
+    position: absolute;
+    display: block;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 2;
+    background-color: #ffffff;
+    opacity: .7;
+    transition: opacity .35s;
+  }
+
+  .sub-title {
+    margin-bottom: 60px;
+    line-height: 1;
+    max-width: 570px;
+  }
+
+  .pain-syndrome-list {
+    padding-top: 50px;
+    padding-bottom: 55px;
+
+    &__item {
+      position: relative;
+      margin-bottom: 12px;
+
+      .syndrom {
+        position: relative;
+        font-family: $primary-fonts;
+        font-style: italic;
+        font-weight: 500;
+        font-size: 30px;
+        line-height: 1;
+
+        min-width: 230px;
+        width: max-content;
+        padding: 11px 44px;
+        border-radius: 10px;
+        background-color: #ffffff;
+
+        &:first-letter {
+          font-size: 36px;
+          font-weight: 700;
+        }
+
+        &:before {
+          position: absolute;
+          content: '';
+          display: block;
+          width: 7px;
+          height: 7px;
+          border-radius: 50%;
+          background-color: #000000;
+          left: 28px;
+          bottom: 20px;
+          z-index: 2;
+        }
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+    }
+
+    &__item.active-syndrom {
+
+
+      .syndrom {
+        color: #ffffff;
+        background-image: linear-gradient(to right bottom, #00caf7, #1678ff);
+      }
+
+      .syndrom:before {
+        background-color: #ffffff;
+      }
+    }
+    &__item.active-syndrom {
+      &:before { position: absolute;
+      right: -15px;
+      content: '';
+      display: block;
+        height: 2px;
+        width: 75%;
+        top: 50%;
+        transform: translateY(-50%);
+        background-image: linear-gradient(to right bottom, #ffffff 30%, #3b3b3b);
+      }
+    }
+  }
+
+  .section__text {
+    max-width: 500px;
+  }
+
+}

@@ -1,0 +1,129 @@
+.section-how-take {
+  min-height: 700px;
+  padding-bottom: 20px;
+  position: relative;
+  background-image: linear-gradient(to top, #dce3ef, #ffffff);
+
+  &:before {
+    position: absolute;
+    content: '';
+    display: block;
+    background-image: url(../assets/img/bg55.png);
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: 0 0;
+    left: 0;
+    bottom: 0;
+    z-index: 0;
+    width: 34%;
+    min-height: 680px;
+  }
+
+  .block-content {
+    max-width: 1500px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .section__title {
+    margin-bottom: 50px;
+  }
+
+  .bottom-row {
+    padding-top: 25px;
+    border-top: 2px solid $white;
+
+    .section__text {
+      max-width: 1080px;
+      margin: 0 auto;
+      width: 100%;
+    }
+  }
+
+  .section__title,
+  .medicament-name {
+    color: #d9d9d9;
+    font-weight: 300;
+  }
+  .medicament-name{
+    font-size: 90px;
+  }
+  .section__title{
+    font-size: 90px;
+    font-weight: 500;
+    text-transform: none;
+  }
+  .take-list {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 50px;
+  }
+
+  .take-card {
+    max-width: 190px;
+    width: 100%;
+    background-color: $white;
+    border: 1px solid #ff7500;
+    border-radius: 15px;
+    padding: 25px 17px 40px;
+    position: relative;
+
+    &:hover:after {
+      transform: translateX(-50%) scale(1.5);
+      box-shadow: none;
+    }
+
+    &:after,
+    &:before {
+      position: absolute;
+      content: '';
+      display: block;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1;
+    }
+
+    &:after {
+      width: 20px;
+      height: 20px;
+      background-image: linear-gradient(to right, #f63b00, #ffa500);
+      -webkit-box-shadow: 0 0 0 9px rgba(255, 255, 255, 1);
+      -moz-box-shadow: 0 0 0 9px rgba(255, 255, 255, 1);
+      box-shadow: 0 0 0 9px rgba(255, 255, 255, 1);
+      z-index: 3;
+      border-radius: 50%;
+      bottom: -12px;
+      transition: .35s;
+    }
+
+    &:before {
+      width: 1px;
+      height: 44px;
+      bottom: -44px;
+      background-color: #ff7500;
+    }
+
+    &__top-content {
+      min-height: 120px;
+      background-repeat: no-repeat;
+      -webkit-background-size: contain;
+      background-size: contain;
+      background-position: 0 0;
+      margin-bottom: 20px;
+    }
+
+    &__body {
+      font-family: $secondary-fonts;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 1;
+      text-transform: lowercase;
+    }
+  }
+  .section__text{
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 1.3;
+  }
+}
