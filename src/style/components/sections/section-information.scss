@@ -57,6 +57,10 @@
 
       .btn {
         background-color: #f66d00;
+        &:hover,
+        &:focus{
+          background-color: #FFA700;
+        }
       }
     }
 
@@ -65,6 +69,10 @@
 
       .btn {
         background-color: #1678ff;
+        &:hover,
+        &:focus{
+          background-color: #00d5fb;
+        }
       }
     }
 
@@ -73,6 +81,10 @@
 
       .btn {
         background-color: #7031d3;
+        &:hover,
+        &:focus{
+          background-color: #c547dc;
+        }
       }
     }
 

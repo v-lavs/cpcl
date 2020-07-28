@@ -875,6 +875,11 @@ body {
   background-color: #f66d00;
 }
 
+.section-information .card-types:first-child .btn:hover,
+.section-information .card-types:first-child .btn:focus {
+  background-color: #FFA700;
+}
+
 .section-information .card-types:nth-child(2) {
   background-image: linear-gradient(to right top, #7fdbfa, #81c6ff);
 }
@@ -883,12 +888,22 @@ body {
   background-color: #1678ff;
 }
 
+.section-information .card-types:nth-child(2) .btn:hover,
+.section-information .card-types:nth-child(2) .btn:focus {
+  background-color: #00d5fb;
+}
+
 .section-information .card-types:last-child {
   background-image: linear-gradient(to right top, #8987fc, #a48aff);
 }
 
 .section-information .card-types:last-child .btn {
   background-color: #7031d3;
+}
+
+.section-information .card-types:last-child .btn:hover,
+.section-information .card-types:last-child .btn:focus {
+  background-color: #c547dc;
 }
 
 .section-information .card-types .bg-card {
@@ -941,6 +956,15 @@ body {
 
 .section-information .color-violet {
   color: #8f41e3;
+}
+
+.section-reasons .container {
+  display: flex;
+}
+
+.section-reasons .left-content,
+.section-reasons .right-content {
+  width: 50%;
 }
 
 .main-nav {

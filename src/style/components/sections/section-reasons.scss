@@ -1,3 +1,9 @@
-.section-reasons{
-
+.section-reasons {
+  .container{
+    display: flex;
+  }
+  .left-content,
+  .right-content {
+    width: 50%;
+  }
 }
