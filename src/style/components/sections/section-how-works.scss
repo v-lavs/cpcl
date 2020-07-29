@@ -1,11 +1,42 @@
 .section-how-works {
+  .section__title {
+    margin-bottom: 35px;
+  }
 
   .sub-title {
     width: 56%;
-    margin: 0 auto 50px;
+    margin: 0 auto 45px;
     text-align: center;
   }
+  .dashed-gradient{
+    background-image: linear-gradient(to right, rgba(255,255,255,.9) 50%, rgba(255,255,255,0) 0%);
+    background-position: bottom;
+    background-size: 10px 1px;
+    background-repeat: repeat-x;
+  }
 
+  .description__item{
+    position: relative;
+    padding: 5px 0 11px;
+    &:first-letter{
+      font-size: 20px;
+    }
+    &:before{
+      position: absolute;
+      content: '';
+      display: block;
+      background-color: $white;
+      border-radius: 50%;
+      width: 7px;
+      height: 7px;
+      left: -17px;
+      top: 15px;
+      z-index: 1;
+    }
+    &.dashed-gradient:last-child{
+      background-image: none;
+    }
+  }
   .bg-gray {
     width: 100%;
     background-image: linear-gradient(to bottom, #ececec 20%, #ffffff 80%);
@@ -13,7 +44,7 @@
 
   .section-bg {
     border-top: 1px solid #b6b6b7;
-    min-height:764px;
+    min-height: 764px;
     background-repeat: no-repeat;
     -webkit-background-size: 50%;
     background-size: 50%;
@@ -30,7 +61,7 @@
 
   .preparation-card {
     background-color: transparent;
-    max-width: 264px;
+    max-width: 300px;
 
     &__header {
       background-color: transparent;
@@ -52,13 +83,16 @@
     &__description {
       font-family: $secondary-fonts;
       font-weight: 400;
-      font-size: 19px;
+      font-size: 17px;
       line-height: 1.17;
       color: #ffffff;
       padding-left: 34px;
       padding-right: 34px;
-      padding-top: 24px;
-      padding-bottom: 34px;
+      padding-top: 15px;
+      padding-bottom: 12px;
+      sup{
+        font-size: 12px;
+      }
     }
 
     &:first-child {
@@ -105,13 +139,12 @@
     }
 
     &:nth-child(2) {
-      max-width: 556px;
+      max-width: 365px;
 
       .preparation-card__description {
         border-radius: 0 0 25px 25px;
         background-color: #71229f;
         overflow: hidden;
-        padding: 20px 18px 18px;
       }
     }
   }

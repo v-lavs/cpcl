@@ -1,10 +1,11 @@
 html {
-  font: 400 20px/1.77 $secondary-fonts;
+  font: 400 20px/1.3 $secondary-fonts;
 }
 
 body {
   background: $white;
-  }
+  -webkit-font-smoothing: antialiased;
+}
 
 .wrapper {
   overflow: hidden;
@@ -12,17 +13,13 @@ body {
 
 .main {
   padding-top: 125px;
+  padding-bottom: 24vh;
 }
 
 .img {
   display: block;
   width: 100%;
   height: auto;
-}
-
-
-.dynamic-content {
-
 }
 
 .backdrop {
@@ -36,38 +33,55 @@ body {
   opacity: 0.67;
   z-index: 800;
 }
+
 .title-site,
-.section__title{
+.section__title {
   font-family: $primary-fonts;
   font-style: italic;
   line-height: 1.1;
   color: #000000;
   text-transform: uppercase;
 }
-.title-site{
+
+.title-site {
   font-weight: 300;
   font-size: 41px;
   margin-bottom: 24px;
 }
-.section{
+
+.section {
   padding-top: 120px;
   padding-bottom: 120px;
 }
-.section__heading{
+
+.section__heading {
   text-align: center;
- }
-.section__title{
+}
+
+.section__title {
   font-weight: 700;
   font-size: 40px;
-  margin-bottom: 35px;
+  margin-bottom: 95px;
+
+  &_big {
+    font-size: 45px;
+  }
 }
-.decor{
+
+.section__text {
+  font-size: 23px;
+  font-weight: 400;
+  line-height: 1.3;
+}
+
+.decor {
   display: inline-block;
   position: relative;
   padding-left: 45px;
-  &:before{
+
+  &:before {
     left: 0;
-    top:36%;
+    top: 36%;
     position: absolute;
     content: '';
     display: block;
@@ -81,42 +95,55 @@ body {
     background-position: center center;
   }
 }
+
 .registered {
   font-size: 20px;
   font-style: normal;
-  &_large{
+
+  &_large {
     font-size: 40px;
   }
-  &_small{
+}
 
-  }
+.title {
+  font-family: $secondary-fonts;
+  font-weight: 400;
+  font-size: 35px;
+  text-transform: uppercase;
 }
 
 .color-gray {
   color: #b8b8b8;
 }
-.color-orange{
+
+.color-orange {
   color: #ff7500;
 }
-.text_left{
+.color-violet{
+  color: #9e4ad3;
+}
+
+.text_left {
   text-align: left;
 }
-.text_right{
-  text-align: right;
-}
-.text_center{
+
+.text_center {
   text-align: center;
 }
-.medicament-name{
+
+.medicament-name {
+
   color: #000000;
-  font-weight: 700;
+  font-weight: 500;
   font-size: 65px;
   text-transform: none;
-  &_middle{
+
+  &_middle {
     font-weight: 500;
-    font-size: 55px;
+    font-size: 50px;
   }
-  &_small{
+
+  &_small {
     font-weight: 500;
     font-size: 20px;
     font-family: $primary-fonts;
@@ -124,26 +151,27 @@ body {
   }
 }
 
-.mause-parallax{
+.mause-parallax {
   position: relative;
   height: 100%;
   overflow: hidden;
 }
 
 .mouse-parallax__bg,
-.mouse-parallax__bg-2{
+.mouse-parallax__bg-2 {
   position: absolute;
   width: 110%;
   height: 110%;
   z-index: -1;
+
   &:before,
-  &:after{
+  &:after {
     position: absolute;
     content: '';
     display: block;
     z-index: 0;
     -webkit-background-size: cover;
-    background-size:cover;
+    background-size: cover;
     background-repeat: no-repeat;
   }
 }

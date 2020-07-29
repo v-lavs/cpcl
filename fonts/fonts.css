@@ -32,3 +32,14 @@
 	font-weight: 400;
 	font-style: normal;
 }
+
+@font-face {
+	font-family: 'MyriadPro';
+	src: url('MyriadPro-Regular.eot?#iefix') format('embedded-opentype'),
+	url('MyriadPro-Regular.otf') format('opentype'),
+	url('MyriadPro-Regular.woff') format('woff'),
+	url('MyriadPro-Regular.ttf') format('truetype'),
+	url('MyriadPro-Regular.svg#MyriadPro-Regular') format('svg');
+	font-weight: 400;
+	font-style: normal;
+}

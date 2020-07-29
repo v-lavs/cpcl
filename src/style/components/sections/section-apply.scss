@@ -64,8 +64,6 @@
     }
   }
 
-
-
   .sub-title {
     margin-bottom: 60px;
     line-height: 1;
@@ -89,7 +87,6 @@
         font-weight: 500;
         font-size: 30px;
         line-height: 1;
-
         padding: 11px 44px;
         border-radius: 10px;
         background-color: #ffffff;
@@ -121,7 +118,6 @@
 
     &__item.active-syndrom {
 
-
       .syndrom {
         color: #ffffff;
         background-image: linear-gradient(to right bottom, #00caf7, #1678ff);
@@ -133,11 +129,11 @@
     }
     &__item.active-syndrom {
       &:before { position: absolute;
-      right: -15px;
+      right: -115%;
       content: '';
       display: block;
-        height: 2px;
-        width: 75%;
+        height: 1px;
+        width: 100%;
         top: 50%;
         transform: translateY(-50%);
         background-image: linear-gradient(to right bottom, #ffffff 30%, #3b3b3b);
@@ -146,7 +142,7 @@
   }
 
   .section__text {
-    max-width: 500px;
+    max-width: 570px;
   }
 
 }

@@ -3,21 +3,22 @@
 */
 
 .text {
+  &_small{
+    font-size: 20px;
+    font-weight: 400;
+  }
+
   &_md{
     font-size: 21px;
   }
   &_middle{
-    font-size: 23px;
+    font-size: 22px;
     font-weight: 300;
   }
 
+  &_large {
+    font-size: 50px;
+  }
 }
-.title{
-  font-family: $secondary-fonts;
-  font-weight: 400;
-  font-size: 40px;
-  margin-bottom: 40px;
-}
-.sub-title{
-  line-height: 1.3;
-}
+
+

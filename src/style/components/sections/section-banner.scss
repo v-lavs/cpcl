@@ -55,6 +55,12 @@
     font-weight: 700;
     font-size: 25px;
     line-height: 1;
+    p:first-letter{
+      font-size: 35px;
+    }
+    sup{
+      font-size: 16px;
+    }
   }
 
   .advantage {
@@ -99,7 +105,7 @@
     background-repeat: no-repeat;
     -webkit-background-size: 65%;
     background-size: 65%;
-    background-position: center center;
+    background-position: 40% center;
   }
 
   .mouse-parallax__bg {
@@ -144,5 +150,15 @@
       background-image: url(../assets/img/object22.png);
       background-position: 0 0;
     }
+  }
+}
+
+@include respond-to($md) {
+  .container {
+    flex-wrap: wrap;
+  }
+  .left-content,
+  .text-content {
+    width: 100%;
   }
 }
