@@ -60,17 +60,33 @@ $(document).ready(function () {
     var bannerSlider;
     var instructionSlider;
     var headAcheTypesSlider;
+    var preparationsSlider;
 
     function slidersInit () {
-        if ($(window).width() <= 767) {
+        if ($(window).width() <= 1040) {
             if(!bannerSlider) {
                 bannerSlider = new Swiper('.banner-slider');
             }
             if(!instructionSlider) {
-                instructionSlider = new Swiper('#instructionSlider');
+                instructionSlider = new Swiper('#instructionSlider', {
+                    slidesPerView: 1,
+                    breakpoints: {
+                        767: {
+                            slidesPerView: 2,
+                        },
+                    }
+                });
             }
             if(!headAcheTypesSlider) {
-                headAcheTypesSlider = new Swiper('#headAcheTypesSlider');
+                headAcheTypesSlider = new Swiper('#headAcheTypesSlider', {
+                });
+            }
+            if(!preparationsSlider) {
+                preparationsSlider = new Swiper('#preparationsSlider', {
+                    slidesPerView: 'auto',
+                    spaceBetween: 50,
+                    loop: false
+                });
             }
         } else {
             if(bannerSlider) {
@@ -84,6 +100,10 @@ $(document).ready(function () {
             if(headAcheTypesSlider) {
                 headAcheTypesSlider.destroy(true, true);
                 headAcheTypesSlider = null;
+            }
+            if(preparationsSlider) {
+                preparationsSlider.destroy(true, true);
+                preparationsSlider = null;
             }
         }
     }

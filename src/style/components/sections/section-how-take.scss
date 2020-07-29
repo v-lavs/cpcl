@@ -3,6 +3,14 @@
   padding-bottom: 55px;
   background-image: linear-gradient(to top, #dce3ef, #ffffff);
 
+  .section__title {
+    text-transform: none;
+    .medicament-name_middle {
+      font-size: 0.85em;
+      text-transform: uppercase;
+    }
+  }
+
   .bg-section-top{
     background-repeat: no-repeat;
     -webkit-background-size: 25%;
@@ -112,6 +120,14 @@
       font-size: 24px;
       line-height: 1;
       text-transform: lowercase;
+    }
+  }
+}
+
+@include respond-to($md) {
+  .section-how-take {
+    .take-card {
+      margin-left: auto;
     }
   }
 }

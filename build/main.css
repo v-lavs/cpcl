@@ -292,11 +292,10 @@ body {
   max-width: 1920px;
   width: 100%;
   margin: 0 auto;
-  padding-left: 15px;
-  padding-right: 15px;
 }
 
 .section-banner {
+  position: relative;
   padding-top: 85px;
   padding-bottom: 120px;
 }
@@ -308,6 +307,10 @@ body {
 .section-banner .left-content,
 .section-banner .text-content {
   width: 50%;
+}
+
+.section-banner .text-content {
+  padding-right: 40px;
 }
 
 .section-banner .left-content {
@@ -341,19 +344,17 @@ body {
   align-items: center;
   min-height: 70px;
   border: 1px solid #cccccc;
-  padding-left: 70px;
-  padding-right: 30px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding: 10px 30px 10px 70px;
   width: 100%;
-  border-radius: 50px;
+  border-radius: 0 2em 2em 0;
   font-weight: 700;
   font-size: 25px;
   line-height: 1;
 }
 
 .section-banner .advantage-list__text p:first-letter {
-  font-size: 35px;
+  font-size: 1.4em;
+  line-height: 0;
 }
 
 .section-banner .advantage-list__text sup {
@@ -468,7 +469,8 @@ body {
 }
 
 .section-how-works .description__item:first-letter {
-  font-size: 20px;
+  font-size: 1.38em;
+  line-height: 0;
 }
 
 .section-how-works .description__item:before {
@@ -494,24 +496,27 @@ body {
 }
 
 .section-how-works .section-bg {
-  border-top: 1px solid #b6b6b7;
-  min-height: 764px;
-  background-repeat: no-repeat;
-  -webkit-background-size: 50%;
-  background-size: 50%;
-  background-position: center 0;
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
 }
 
 .section-how-works .preparations {
-  width: 70%;
-  display: flex;
-  justify-content: space-between;
-  margin: 0 auto;
+  margin: -200px auto 0;
+  overflow: visible;
+  max-width: 1080px;
+}
+
+.section-how-works .preparations .swiper-wrapper {
+  justify-content: center;
 }
 
 .section-how-works .preparation-card {
   background-color: transparent;
-  max-width: 300px;
+  max-width: 320px;
+  width: 100%;
+  z-index: 2;
 }
 
 .section-how-works .preparation-card__header {
@@ -527,15 +532,13 @@ body {
   text-align: center;
   padding-bottom: 25px;
   padding-top: 10px;
-  padding-left: 34px;
-  padding-right: 34px;
 }
 
 .section-how-works .preparation-card__description {
   font-family: "Affect", sans-serif;
   font-weight: 400;
-  font-size: 17px;
-  line-height: 1.17;
+  font-size: 18px;
+  line-height: 1.27;
   color: #ffffff;
   padding-left: 34px;
   padding-right: 34px;
@@ -545,6 +548,13 @@ body {
 
 .section-how-works .preparation-card__description sup {
   font-size: 12px;
+}
+
+.section-how-works .preparation-card:first-child {
+  position: absolute;
+  left: 6%;
+  top: -450px;
+  transform: translate(-100%, -25%);
 }
 
 .section-how-works .preparation-card:first-child .preparation-card__description {
@@ -560,18 +570,18 @@ body {
   box-shadow: 2px 2px 43px 0 rgba(255, 153, 0, 0.9);
 }
 
+.section-how-works .preparation-card:last-child {
+  position: absolute;
+  right: 4%;
+  top: -450px;
+  transform: translate(100%, -25%);
+}
+
 .section-how-works .preparation-card:last-child:hover .preparation-card__description {
   transition: .35s;
   -webkit-box-shadow: 2px 2px 43px 0 rgba(0, 156, 255, 0.9);
   -moz-box-shadow: 2px 2px 43px 0 rgba(0, 156, 255, 0.9);
   box-shadow: 2px 2px 43px 0 rgba(0, 156, 255, 0.9);
-}
-
-.section-how-works .preparation-card:nth-child(2):hover .preparation-card__description {
-  transition: .35s;
-  -webkit-box-shadow: 2px 2px 43px 0 rgba(113, 34, 159, 0.9);
-  -moz-box-shadow: 2px 2px 43px 0 rgba(113, 34, 159, 0.9);
-  box-shadow: 2px 2px 43px 0 rgba(113, 34, 159, 0.9);
 }
 
 .section-how-works .preparation-card:last-child .preparation-card__description {
@@ -581,13 +591,39 @@ body {
 }
 
 .section-how-works .preparation-card:nth-child(2) {
-  max-width: 365px;
+  max-width: 500px;
+}
+
+.section-how-works .preparation-card:nth-child(2):hover .preparation-card__description {
+  transition: .35s;
+  -webkit-box-shadow: 2px 2px 43px 0 rgba(113, 34, 159, 0.9);
+  -moz-box-shadow: 2px 2px 43px 0 rgba(113, 34, 159, 0.9);
+  box-shadow: 2px 2px 43px 0 rgba(113, 34, 159, 0.9);
 }
 
 .section-how-works .preparation-card:nth-child(2) .preparation-card__description {
   border-radius: 0 0 25px 25px;
   background-color: #71229f;
   overflow: hidden;
+}
+
+.section-how-works .swiper-container-initialized {
+  overflow: hidden;
+  padding-left: 50px;
+}
+
+.section-how-works .swiper-container-initialized .swiper-wrapper {
+  justify-content: flex-start;
+}
+
+.section-how-works .swiper-container-initialized .preparation-card:nth-child(n) {
+  position: relative;
+  transform: none;
+  left: auto;
+  right: auto;
+  top: auto;
+  bottom: auto;
+  max-width: 500px;
 }
 
 .section-apply .container {
@@ -602,10 +638,12 @@ body {
 
 .section-apply .left-part {
   display: flex;
+  padding-left: 30px;
 }
 
 .section-apply .right-part {
   padding-left: 90px;
+  padding-right: 40px;
 }
 
 .section-apply .content-left {
@@ -680,19 +718,21 @@ body {
 
 .section-apply .pain-syndrome-list__item .syndrom {
   position: relative;
-  font-family: "Roboto", sans-serif;
   font-style: italic;
   font-weight: 500;
-  font-size: 30px;
+  font-size: 35px;
   line-height: 1;
-  padding: 11px 44px;
+  padding: 6px 44px;
   border-radius: 10px;
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
   background-color: #ffffff;
 }
 
 .section-apply .pain-syndrome-list__item .syndrom:first-letter {
-  font-size: 36px;
+  font-size: 1.43em;
   font-weight: 700;
+  line-height: 1;
 }
 
 .section-apply .pain-syndrome-list__item .syndrom:before {
@@ -704,7 +744,8 @@ body {
   border-radius: 50%;
   background-color: #000000;
   left: 28px;
-  bottom: 20px;
+  top: 50%;
+  transform: translateY(-50%);
   z-index: 2;
 }
 
@@ -741,6 +782,15 @@ body {
   min-height: 700px;
   padding-bottom: 55px;
   background-image: linear-gradient(to top, #dce3ef, #ffffff);
+}
+
+.section-how-take .section__title {
+  text-transform: none;
+}
+
+.section-how-take .section__title .medicament-name_middle {
+  font-size: 0.85em;
+  text-transform: uppercase;
 }
 
 .section-how-take .bg-section-top {
@@ -1177,19 +1227,19 @@ body {
 }
 
 .section-reasons .left-content .text-content {
-  padding-left: 180px;
+  padding-left: 16.5%;
 }
 
 .section-reasons .block-gradient-bg {
   background-image: linear-gradient(to right, #ffffff, transparent);
-  padding: 55px 50px 55px 195px;
-  margin-left: -15px;
+  padding: 55px 50px 55px 16.5%;
   margin-bottom: 70px;
 }
 
 .section-reasons .right-content {
   width: 40%;
   padding-left: 50px;
+  padding-right: 40px;
 }
 
 .section-reasons .right-content .section__text {
@@ -1384,10 +1434,7 @@ body {
   justify-content: space-between;
   align-items: baseline;
   z-index: 3;
-  padding-top: 45px;
-  padding-bottom: 20px;
-  padding-right: 105px;
-  padding-left: 105px;
+  padding: 45px 4.65% 20px;
 }
 
 .header .logo {
@@ -1512,7 +1559,7 @@ body {
   height: 12vh;
 }
 
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 1200px) {
   .main-nav {
     padding-top: 30px;
     position: fixed;
@@ -1553,13 +1600,50 @@ body {
   }
 }
 
-@media only screen and (max-width: 780px) {
-  .container {
+@media only screen and (max-width: 1040px) {
+  .section-banner {
+    padding-bottom: 0;
+  }
+
+  .section-banner .container {
     flex-wrap: wrap;
   }
 
-  .left-content,
-  .text-content {
+  .section-banner .left-content,
+  .section-banner .text-content {
     width: 100%;
+  }
+
+  .section-banner .left-content {
+    display: flex;
+    justify-content: center;
+  }
+
+  .section-banner .text-content .title-site {
+    display: none;
+  }
+
+  .section-banner .advantage-list__item {
+    max-width: none;
+    margin: 60px 0 40px;
+  }
+
+  .section-banner .advantage-list__text {
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+    justify-content: center;
+  }
+
+  .section-banner .advantage {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -75%);
+    z-index: 1;
+  }
+
+  .section-how-take .take-card {
+    margin-left: auto;
   }
 }

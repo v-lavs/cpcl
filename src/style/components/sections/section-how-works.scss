@@ -1,3 +1,6 @@
+
+$slider-top-offset: 200;
+
 .section-how-works {
   .section__title {
     margin-bottom: 35px;
@@ -19,7 +22,8 @@
     position: relative;
     padding: 5px 0 11px;
     &:first-letter{
-      font-size: 20px;
+      font-size: 1.38em;
+      line-height: 0;
     }
     &:before{
       position: absolute;
@@ -43,25 +47,26 @@
   }
 
   .section-bg {
-    border-top: 1px solid #b6b6b7;
-    min-height: 764px;
-    background-repeat: no-repeat;
-    -webkit-background-size: 50%;
-    background-size: 50%;
-    background-position: center 0;
-
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
   }
 
   .preparations {
-    width: 70%;
-    display: flex;
-    justify-content: space-between;
-    margin: 0 auto;
+    margin: -200px auto 0;
+    overflow: visible;
+    max-width: 1080px;
+    .swiper-wrapper {
+      justify-content: center;
+    }
   }
 
   .preparation-card {
     background-color: transparent;
-    max-width: 300px;
+    max-width: 320px;
+    width: 100%;
+    z-index: 2;
 
     &__header {
       background-color: transparent;
@@ -76,15 +81,13 @@
       text-align: center;
       padding-bottom: 25px;
       padding-top: 10px;
-      padding-left: 34px;
-      padding-right: 34px;
     }
 
     &__description {
       font-family: $secondary-fonts;
       font-weight: 400;
-      font-size: 17px;
-      line-height: 1.17;
+      font-size: 18px;
+      line-height: 1.27;
       color: #ffffff;
       padding-left: 34px;
       padding-right: 34px;
@@ -96,41 +99,39 @@
     }
 
     &:first-child {
+      position: absolute;
+      left: 6%;
+      top: -450px;
+      transform: translate(-100%, -25%);
       .preparation-card__description {
         border-radius: 25px 0 0 25px;
         background-image: linear-gradient(to right bottom, #fb3400, #fe5a00, #ff7700, #ff9000, #ffa700);
         overflow: hidden;
       }
-    }
-
-    &:first-child:hover {
-      .preparation-card__description {
-        transition: .35s;
-        -webkit-box-shadow: 2px 2px 43px 0 rgba(255, 153, 0, .9);
-        -moz-box-shadow: 2px 2px 43px 0 rgba(255, 153, 0, .9);
-        box-shadow: 2px 2px 43px 0 rgba(255, 153, 0, .9);
-      }
-    }
-
-    &:last-child:hover {
-      .preparation-card__description {
-        transition: .35s;
-        -webkit-box-shadow: 2px 2px 43px 0 rgba(0, 156, 255, .9);
-        -moz-box-shadow: 2px 2px 43px 0 rgba(0, 156, 255, .9);
-        box-shadow: 2px 2px 43px 0 rgba(0, 156, 255, .9);
-      }
-    }
-
-    &:nth-child(2):hover {
-      .preparation-card__description {
-        transition: .35s;
-        -webkit-box-shadow: 2px 2px 43px 0 rgba(113, 34, 159, .9);
-        -moz-box-shadow: 2px 2px 43px 0 rgba(113, 34, 159, .9);
-        box-shadow: 2px 2px 43px 0 rgba(113, 34, 159, .9);
+      &:hover {
+        .preparation-card__description {
+          transition: .35s;
+          -webkit-box-shadow: 2px 2px 43px 0 rgba(255, 153, 0, .9);
+          -moz-box-shadow: 2px 2px 43px 0 rgba(255, 153, 0, .9);
+          box-shadow: 2px 2px 43px 0 rgba(255, 153, 0, .9);
+        }
       }
     }
 
     &:last-child {
+      position: absolute;
+      right: 4%;
+      top: -450px;
+      transform: translate(100%, -25%);
+      &:hover {
+        .preparation-card__description {
+          transition: .35s;
+          -webkit-box-shadow: 2px 2px 43px 0 rgba(0, 156, 255, .9);
+          -moz-box-shadow: 2px 2px 43px 0 rgba(0, 156, 255, .9);
+          box-shadow: 2px 2px 43px 0 rgba(0, 156, 255, .9);
+        }
+      }
+
       .preparation-card__description {
         border-radius: 0 25px 25px 0;
         background-image: linear-gradient(to right top, #1778ff, #0094ff, #00acff, #00c1ff, #00d4fa);
@@ -139,12 +140,40 @@
     }
 
     &:nth-child(2) {
-      max-width: 365px;
+      max-width: 500px;
+
+      &:hover {
+        .preparation-card__description {
+          transition: .35s;
+          -webkit-box-shadow: 2px 2px 43px 0 rgba(113, 34, 159, .9);
+          -moz-box-shadow: 2px 2px 43px 0 rgba(113, 34, 159, .9);
+          box-shadow: 2px 2px 43px 0 rgba(113, 34, 159, .9);
+        }
+      }
 
       .preparation-card__description {
         border-radius: 0 0 25px 25px;
         background-color: #71229f;
         overflow: hidden;
+      }
+    }
+  }
+
+  .swiper-container-initialized {
+    overflow: hidden;
+    padding-left: 50px;
+    .swiper-wrapper {
+      justify-content: flex-start;
+    }
+    .preparation-card {
+      &:nth-child(n) {
+        position: relative;
+        transform: none;
+        left: auto;
+        right: auto;
+        top: auto;
+        bottom: auto;
+        max-width: 500px;
       }
     }
   }

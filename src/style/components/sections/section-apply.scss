@@ -10,9 +10,11 @@
   }
   .left-part{
     display: flex;
+    padding-left: 30px;
   }
   .right-part {
     padding-left: 90px;
+    padding-right: 40px;
   }
   .content-left{
     margin-left: auto;
@@ -82,18 +84,20 @@
 
       .syndrom {
         position: relative;
-        font-family: $primary-fonts;
         font-style: italic;
         font-weight: 500;
-        font-size: 30px;
+        font-size: 35px;
         line-height: 1;
-        padding: 11px 44px;
+        padding: 6px 44px;
         border-radius: 10px;
+        font-family: $primary-fonts;
+        text-transform: uppercase;
         background-color: #ffffff;
 
         &:first-letter {
-          font-size: 36px;
+          font-size: 1.43em;
           font-weight: 700;
+          line-height: 1;
         }
 
         &:before {
@@ -105,7 +109,8 @@
           border-radius: 50%;
           background-color: #000000;
           left: 28px;
-          bottom: 20px;
+          top: 50%;
+          transform: translateY(-50%);
           z-index: 2;
         }
       }
