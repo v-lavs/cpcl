@@ -982,25 +982,91 @@ body {
 }
 
 .section-information .manifestations-pain {
+  margin: 0 -15px;
   padding-top: 50px;
   margin-bottom: 40px;
 }
 
 .section-information .manifestation__item {
+  position: relative;
   color: #7b7b7b;
   padding: 20px 0;
   border-style: solid;
   border-width: 3px;
   border-image: linear-gradient(to left, #fff 5%, #e8e8e8 50%, #fff 95%) 0 0 100% 0/1px 0 1px 0 stretch;
   transition: .5s;
+  overflow: hidden;
+}
+
+.section-information .manifestation__item:first-child .manifestations {
+  padding: 0 50px;
+}
+
+.section-information .manifestation__item:nth-child(2) .manifestations {
+  padding: 0 25px;
+}
+
+.section-information .manifestation__item .manifestations {
+  max-width: 1600px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.section-information .manifestation__item .img-wrap {
+  display: inline-block;
+  width: 30px;
+}
+
+.section-information .manifestation__item .img-wrap img {
+  display: inline-block;
+  width: 30px;
+  height: auto;
+  -webkit-filter: grayscale(1) opacity(0.5);
+  filter: grayscale(1) opacity(0.5);
+  transition: .35s;
+}
+
+.section-information .manifestation__item:before,
+.section-information .manifestation__item:after {
+  position: absolute;
+  content: '';
+  display: block;
+  width: 1px;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  -webkit-box-shadow: 0 0 90px 20px rgba(129, 198, 255, 0);
+  box-shadow: 0 0 90px 20px rgba(129, 198, 255, 0);
+}
+
+.section-information .manifestation__item:after {
+  right: 0;
+}
+
+.section-information .manifestation__item:hover:before,
+.section-information .manifestation__item:hover:after {
+  -webkit-box-shadow: 0 0 90px 20px rgba(129, 198, 255, 0.35);
+  box-shadow: 0 0 90px 20px rgba(129, 198, 255, 0.35);
 }
 
 .section-information .manifestation__item:hover {
   transition: .5s;
   font-weight: 700;
+  color: #000000;
   text-transform: uppercase;
   -webkit-box-shadow: 0 0 20px -4px rgba(129, 198, 255, 0.35);
   box-shadow: 0 0 20px -4px rgba(129, 198, 255, 0.35);
+}
+
+.section-information .manifestation__item:hover img {
+  filter: none;
+  transform: scale(1.1);
+}
+
+.rotate-img {
+  transform: rotate(180deg);
 }
 
 .types-headache {
@@ -1200,14 +1266,15 @@ body {
   right: 35px;
   top: 20px;
   display: none;
-  width: 28px;
-  height: 28px;
+  width: 20px;
+  height: 20px;
   background-color: transparent;
   border: none;
 }
 
-.main-nav .btn-close .icon {
-  font-size: 24px;
+.main-nav .btn-close svg {
+  width: 100%;
+  height: auto;
 }
 
 .main-nav .lang-dropdown {
