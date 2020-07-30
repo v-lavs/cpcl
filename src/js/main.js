@@ -65,7 +65,11 @@ $(document).ready(function () {
     function slidersInit () {
         if ($(window).width() <= 1040) {
             if(!bannerSlider) {
-                bannerSlider = new Swiper('.banner-slider');
+                bannerSlider = new Swiper('.banner-slider', {
+                    pagination: {
+                        el: '.swiper-pagination',
+                    }
+                });
             }
             if(!instructionSlider) {
                 instructionSlider = new Swiper('#instructionSlider', {

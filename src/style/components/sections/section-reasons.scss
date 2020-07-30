@@ -1,5 +1,6 @@
 .section-reasons {
   background-image: linear-gradient(to top, #e5e5e5 50%, transparent);
+  padding-top: 40px;
 
   .section__text {
     margin-bottom: 35px;
@@ -35,7 +36,7 @@
   .right-content {
     width: 40%;
     padding-left: 50px;
-    padding-right: 40px;
+    padding-right: 30px;
 
     .section__text {
       margin-bottom: 22px;
@@ -82,5 +83,25 @@
     background-size: 48%;
     background-position: center bottom;
     margin-bottom: 17px;
+  }
+}
+
+@media screen and (max-width: 1420px) {
+  .section-reasons {
+    .left-content {
+      width: 55%;
+
+      .text-content {
+        padding-left: 14%;
+      }
+    }
+
+    .block-gradient-bg {
+      padding-left: 14%;
+    }
+
+    .right-content {
+      width: 45%;
+    }
   }
 }

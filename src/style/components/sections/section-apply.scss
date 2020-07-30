@@ -1,4 +1,5 @@
 .section-apply {
+  padding-bottom: 180px;
   .container {
     display: flex;
     justify-content: center;
@@ -149,5 +150,78 @@
   .section__text {
     max-width: 570px;
   }
+  .mouse-parallax__bg{
+    .img-parallax {
+      &:first-child {
+        bottom: 22%;
+        left: -3%;
+        height: 698px;
+      }
+
+      &:nth-child(2) {
+        right: 6.5%;
+        bottom: 10%;
+        height: 423px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1610px) {
+  .section-apply{
+    .mouse-parallax__bg{
+      .img-parallax {
+        &:first-child {
+          height: 530px;
+        }
+        &:nth-child(2) {
+          height: 260px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1420px) {
+  .section-apply{
+    .mouse-parallax__bg{
+      .img-parallax {
+        &:first-child {
+          height: 280px;
+          bottom: 30%;
+        }
+
+        &:nth-child(2) {
+          height: 200px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .section-apply{
+    padding-bottom: 60px;
+    .mouse-parallax__bg{
+      .img-parallax {
+        &:first-child {
+          height: 390px;
+          bottom: 43%;
+        }
+      }
+    }
+    //.images-list__item{
+    //  width: 50%;
+    //}
+    .pain-syndrome-list__item .syndrom {
+      font-size: 27px;
+    }
+    .right-part {
+      padding-left: 30px;
+    }
+  }
+}
+
+@include respond-to($md) {
 
 }

@@ -1,6 +1,6 @@
 .section-banner {
+  padding-top: 210px;
   position: relative;
-  padding-top: 85px;
   padding-bottom: 120px;
 
   .container {
@@ -114,46 +114,152 @@
   }
 
   .mouse-parallax__bg {
-    &:before {
-      width: 32%;
-      height: 52%;
-      background-image: url(../assets/img/object4.png);
-      background-position: right 0;
-    }
+    .img-parallax {
+      &:first-child {
+        top: 4px;
+        left: 0;
+        height: 370px;
+      }
 
-    &:after {
-      width: 12%;
-      height: 30%;
-      right: 5%;
-      background-image: url(../assets/img/object1.png);
-      background-position: 0 0;
+      &:nth-child(2) {
+        right: 5%;
+        top: 0;
+        height: 234px;
+      }
     }
   }
 
   .mouse-parallax__bg-2 {
-    background-image: url(../assets/img/object5.png);
-    background-repeat: no-repeat;
-    -webkit-background-size: 17.5%;
-    background-size: 17.5%;
-    background-position: 30% 40%;
-  }
+    .img-parallax {
+      &:first-child {
+        top: 17%;
+        left: 21.2%;
+        height: 193px;
+      }
 
-  .mouse-parallax__bg-2 {
-    &:before {
-      top: 13%;
-      width: 10%;
-      height: 38.5%;
-      background-image: url(../assets/img/object2.png);
-      background-position: right 0;
+      &:nth-child(2) {
+        top: 10%;
+        left: 0;
+        height: 447px;
+      }
+
+      &:nth-child(3) {
+        right: 3%;
+        top: 19%;
+        height: 474px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1610px) {
+  .section-banner {
+    .mouse-parallax__bg {
+      .img-parallax {
+        &:first-child {
+          height: 320px;
+        }
+
+        &:nth-child(2) {
+          height: 190px;
+        }
+      }
     }
 
-    &:after {
-      width: 5%;
-      height: 33%;
-      right: 5.5%;
-      top: 28%;
-      background-image: url(../assets/img/object22.png);
-      background-position: 0 0;
+    .mouse-parallax__bg-2 {
+      .img-parallax {
+        position: absolute;
+
+        &:first-child {
+          height: 130px;
+        }
+
+        &:nth-child(2) {
+          height: 340px;
+        }
+
+        &:nth-child(3) {
+          height: 400px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1420px) {
+  .section-banner {
+    .mouse-parallax__bg {
+      .img-parallax {
+        &:first-child {
+          height: 240px;
+        }
+
+        &:nth-child(2) {
+          height: 135px;
+        }
+      }
+    }
+
+    .mouse-parallax__bg-2 {
+      .img-parallax {
+        position: absolute;
+
+        &:first-child {
+          height: 100px;
+        }
+
+        &:nth-child(2) {
+          height: 240px;
+        }
+
+        &:nth-child(3) {
+          height: 300px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .section-banner {
+    padding-bottom: 60px;
+
+    .mouse-parallax__bg {
+      .img-parallax {
+        &:first-child {
+          height: 210px;
+        }
+
+        &:nth-child(2) {
+          height: 110px;
+        }
+      }
+    }
+
+    .mouse-parallax__bg-2 {
+      .img-parallax {
+        position: absolute;
+
+        &:first-child {
+          height: 80px;
+        }
+
+        &:nth-child(2) {
+          height: 210px;
+        }
+
+        &:nth-child(3) {
+          height: 200px;
+        }
+      }
+    }
+
+    .medicament-name {
+      font-size: 50px;
+    }
+
+    .advantage-list__text {
+      font-size: 20px;
     }
   }
 }
@@ -161,9 +267,15 @@
 @include respond-to($md) {
   .section-banner {
     padding-bottom: 0;
+    padding-top: 90px;
 
     .container {
       flex-wrap: wrap;
+    }
+
+    .wrap-img {
+      margin: 0 auto;
+      width: 65%;
     }
 
     .left-content,
@@ -172,8 +284,7 @@
     }
 
     .left-content {
-      display: flex;
-      justify-content: center;
+      padding-right: 0;
     }
 
     .text-content .title-site {
@@ -199,5 +310,43 @@
       transform: translate(-50%, -75%);
       z-index: 1;
     }
+    .mouse-parallax__bg {
+      .img-parallax {
+        &:first-child {
+          height: 280px;
+          top: 22%;
+          left: -22%;
+        }
+
+        &:nth-child(2) {
+          top: 28%;
+          height: 135px;
+        }
+      }
+    }
+
+    .mouse-parallax__bg-2 {
+      .img-parallax {
+        position: absolute;
+
+        &:first-child {
+          display: none;
+        }
+
+        &:nth-child(2) {
+          height: 240px;
+          top: 48%;
+        }
+
+        &:nth-child(3) {
+          height: 300px;
+          top: 40%;
+          right: 0;
+        }
+      }
+    }
+  }
+  .swiper-wrapper {
+    padding-top: 15px;
   }
 }

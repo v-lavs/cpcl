@@ -11,11 +11,6 @@ body {
   overflow: hidden;
 }
 
-.main {
-  padding-top: 125px;
-  padding-bottom: 24vh;
-}
-
 .img {
   display: block;
   width: 100%;
@@ -47,6 +42,16 @@ body {
   font-weight: 300;
   font-size: 41px;
   margin-bottom: 24px;
+}
+
+.title-site_mobile{
+  font-family: $primary-fonts;
+  text-transform: uppercase;
+  font-style: italic;
+  font-weight: 300;
+  font-size: 41px;
+  margin-bottom: 8.5%;
+  display: none;
 }
 
 .section {
@@ -151,7 +156,7 @@ body {
   }
 }
 
-.mause-parallax {
+.mouse-parallax {
   position: relative;
   height: 100%;
   overflow: hidden;
@@ -163,16 +168,32 @@ body {
   width: 110%;
   height: 110%;
   z-index: -1;
-
-  &:before,
-  &:after {
+  .img-parallax{
     position: absolute;
-    content: '';
-    display: block;
-    z-index: 0;
-    -webkit-background-size: cover;
-    background-size: cover;
-    background-repeat: no-repeat;
+    width: auto;
   }
 }
 
+@media screen and (max-width: 1200px){
+  .title-site{
+    font-size: 35px;
+  }
+  .section__title{
+    font-size: 34px;
+  }
+  .medicament-name_middle{
+    font-size: 40px;
+  }
+  .section{
+    padding-top: 60px;
+  }
+}
+
+@include respond-to($md) {
+  .title-site_mobile{
+    display: block;
+  }
+  .title-site{
+    display: none;
+  }
+}

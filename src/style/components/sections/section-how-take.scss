@@ -1,6 +1,7 @@
 .section-how-take {
   min-height: 700px;
   padding-bottom: 55px;
+  padding-top: 60px;
   background-image: linear-gradient(to top, #dce3ef, #ffffff);
 
   .section__title {
@@ -121,6 +122,12 @@
       line-height: 1;
       text-transform: lowercase;
     }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .section-how-take {
+    padding-top: 0;
   }
 }
 

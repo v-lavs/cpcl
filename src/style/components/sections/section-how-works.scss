@@ -2,6 +2,7 @@
 $slider-top-offset: 200;
 
 .section-how-works {
+
   .section__title {
     margin-bottom: 35px;
   }
@@ -42,6 +43,7 @@ $slider-top-offset: 200;
     }
   }
   .bg-gray {
+    position: relative;
     width: 100%;
     background-image: linear-gradient(to bottom, #ececec 20%, #ffffff 80%);
   }
@@ -174,6 +176,39 @@ $slider-top-offset: 200;
         top: auto;
         bottom: auto;
         max-width: 500px;
+      }
+    }
+  }
+
+  .mouse-parallax__bg{
+    z-index: 1;
+    .img-parallax {
+      &:first-child {
+        bottom: 23%;
+        left: 0;
+        height: 294px;
+      }
+
+      &:nth-child(2) {
+        right: 6.5%;
+        bottom: 13%;
+        height: 350px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1610px) {
+  .section-how-works{
+    .mouse-parallax__bg{
+      .img-parallax {
+        &:first-child {
+          height: 210px;
+        }
+
+        &:nth-child(2) {
+          height: 240px;
+        }
       }
     }
   }
