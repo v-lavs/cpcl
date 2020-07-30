@@ -3,7 +3,6 @@
   width: 52px;
   background-color: transparent;
   border: none;
-  margin-left: 30px;
 
   .line {
     display: block;
@@ -57,13 +56,13 @@
     padding-bottom: 20px;
     transition: .35s;
   }
+
   &.header_active {
     padding-top: 20px;
     padding-bottom: 20px;
     transition: height .35s;
   }
 }
-
 
 
 //  ------ backdrop
@@ -78,4 +77,33 @@
   background-color: #000;
   opacity: .5;
   z-index: 800;
+}
+
+@include respond-to($md) {
+  .header {
+    .container {
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+
+    .lang-dropdown {
+      position: absolute;
+      left: 320px;
+      transform: translateX(-100%);
+      width: 65px;
+
+      .dropbtn {
+        display: none;
+      }
+
+      .dropdown-content {
+        display: block;
+
+        a {
+          margin-bottom: 10px;
+          border-bottom: none;
+        }
+      }
+    }
+  }
 }

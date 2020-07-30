@@ -78,18 +78,19 @@
 
   .wrap-icon {
     min-height: 105px;
+    max-width: 160px;
     background-repeat: no-repeat;
     -webkit-background-size: 48%;
     background-size: 48%;
     background-position: center bottom;
-    margin-bottom: 17px;
+    margin: 0 auto 17px;
   }
 }
 
 @media screen and (max-width: 1420px) {
   .section-reasons {
     .left-content {
-      width: 55%;
+      width: 50%;
 
       .text-content {
         padding-left: 14%;
@@ -101,7 +102,47 @@
     }
 
     .right-content {
-      width: 45%;
+      width: 50%;
+    }
+  }
+}
+
+@include respond-to($md) {
+  .section-reasons {
+    .left-content,
+    .right-content {
+      width: 100%;
+      padding: 0 40px;
+    }
+
+    .block-gradient-bg,
+    .left-content .text-content {
+      background-image: none;
+      padding: 0;
+    }
+
+    .left-content .text-content,
+    .block-gradient-bg,
+    .factors-box {
+      max-width: 640px;
+      margin: 0 auto;
+    }
+
+    .factors-list {
+      max-width: 480px;
+      margin: auto;
+    }
+
+    .factors-list__item {
+      max-width: none;
+    }
+  }
+}
+
+@include respond-to($sm) {
+  .section-reasons {
+    .factors-list__item {
+      width: 47.5%;
     }
   }
 }

@@ -1,5 +1,6 @@
 .section-apply {
   padding-bottom: 180px;
+
   .container {
     display: flex;
     justify-content: center;
@@ -9,22 +10,26 @@
   .right-part {
     width: 50%;
   }
-  .left-part{
+
+  .left-part {
     display: flex;
     padding-left: 30px;
   }
+
   .right-part {
     padding-left: 90px;
     padding-right: 40px;
   }
-  .content-left{
+
+  .content-left {
     margin-left: auto;
     max-width: 778px;
     width: 100%;
   }
+
   .images-list {
     margin-left: auto;
-    width: 100%;
+    width: auto;
     display: flex;
     flex-wrap: wrap;
     margin: 0 -8px;
@@ -133,11 +138,13 @@
         background-color: #ffffff;
       }
     }
+
     &__item.active-syndrom {
-      &:before { position: absolute;
-      right: -115%;
-      content: '';
-      display: block;
+      &:before {
+        position: absolute;
+        right: -115%;
+        content: '';
+        display: block;
         height: 1px;
         width: 100%;
         top: 50%;
@@ -150,7 +157,8 @@
   .section__text {
     max-width: 570px;
   }
-  .mouse-parallax__bg{
+
+  .mouse-parallax__bg {
     .img-parallax {
       &:first-child {
         bottom: 22%;
@@ -168,12 +176,13 @@
 }
 
 @media screen and (max-width: 1610px) {
-  .section-apply{
-    .mouse-parallax__bg{
+  .section-apply {
+    .mouse-parallax__bg {
       .img-parallax {
         &:first-child {
           height: 530px;
         }
+
         &:nth-child(2) {
           height: 260px;
         }
@@ -183,8 +192,8 @@
 }
 
 @media screen and (max-width: 1420px) {
-  .section-apply{
-    .mouse-parallax__bg{
+  .section-apply {
+    .mouse-parallax__bg {
       .img-parallax {
         &:first-child {
           height: 280px;
@@ -200,9 +209,10 @@
 }
 
 @media screen and (max-width: 1200px) {
-  .section-apply{
+  .section-apply {
     padding-bottom: 60px;
-    .mouse-parallax__bg{
+
+    .mouse-parallax__bg {
       .img-parallax {
         &:first-child {
           height: 390px;
@@ -210,18 +220,56 @@
         }
       }
     }
-    //.images-list__item{
-    //  width: 50%;
-    //}
+
     .pain-syndrome-list__item .syndrom {
       font-size: 27px;
     }
+
     .right-part {
-      padding-left: 30px;
+      padding-left: 20px;
     }
   }
 }
 
 @include respond-to($md) {
+  .section-apply {
+    .images-list__item {
+      width: 50%;
+    }
 
+    .pain-syndrome-list__item .syndrom {
+      font-size: 24px;
+      padding-left: 35px;
+      padding-right: 20px;
+
+      &:before {
+        left: 20px;
+      }
+    }
+  }
+}
+
+@include respond-to($sm) {
+  .section-apply {
+    .container {
+      flex-wrap: wrap;
+    }
+    .left-part,
+    .right-part {
+      padding-left: 40px;
+      padding-right: 40px;
+      width: 100%;
+    }
+    .images-list__item {
+      width: 33.33%;
+    }
+  }
+}
+
+@include respond-to($xs) {
+  .section-apply {
+    .images-list__item {
+      width: 50%;
+    }
+  }
 }

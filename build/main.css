@@ -277,6 +277,7 @@ body {
   position: absolute;
   width: 110%;
   height: 110%;
+  pointer-events: none;
   z-index: -1;
 }
 
@@ -284,6 +285,20 @@ body {
 .mouse-parallax__bg-2 .img-parallax {
   position: absolute;
   width: auto;
+}
+
+.swiper-pagination {
+  padding-top: 15px;
+  bottom: 0 !important;
+}
+
+.swiper-pagination .swiper-pagination-bullet {
+  width: 20px;
+  height: 20px;
+}
+
+.swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 0 12px;
 }
 
 .container {
@@ -313,12 +328,17 @@ body {
 
 .section-banner .left-content {
   display: flex;
-  padding-right: 115px;
+  padding-right: 6%;
 }
 
-.section-banner .wrap-img {
+.section-banner .left-content .wrap-img {
+  display: flex;
   width: 71.5%;
   margin-left: auto;
+}
+
+.section-banner .left-content .wrap-img img {
+  margin: auto;
 }
 
 .section-banner .banner-slider .swiper-wrapper {
@@ -663,7 +683,7 @@ body {
 
 .section-apply .images-list {
   margin-left: auto;
-  width: 100%;
+  width: auto;
   display: flex;
   flex-wrap: wrap;
   margin: 0 -8px;
@@ -982,6 +1002,8 @@ body {
 .section-information .sub-title {
   margin: 0 auto 100px;
   max-width: 1200px;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
 .section-information .section__title {
@@ -1184,6 +1206,7 @@ body {
 .types-headache .swiper-slide {
   padding: 0 10px;
   width: 33.33%;
+  height: auto;
   display: flex;
   justify-content: center;
 }
@@ -1335,11 +1358,12 @@ body {
 
 .section-reasons .wrap-icon {
   min-height: 105px;
+  max-width: 160px;
   background-repeat: no-repeat;
   -webkit-background-size: 48%;
   background-size: 48%;
   background-position: center bottom;
-  margin-bottom: 17px;
+  margin: 0 auto 17px;
 }
 
 .main-nav {
@@ -1458,7 +1482,6 @@ body {
   width: 52px;
   background-color: transparent;
   border: none;
-  margin-left: 30px;
 }
 
 .burger .line {
@@ -1733,7 +1756,7 @@ body {
   }
 
   .section-reasons .left-content {
-    width: 55%;
+    width: 50%;
   }
 
   .section-reasons .left-content .text-content {
@@ -1745,7 +1768,7 @@ body {
   }
 
   .section-reasons .right-content {
-    width: 45%;
+    width: 50%;
   }
 }
 
@@ -1816,7 +1839,7 @@ body {
   }
 
   .section-apply .right-part {
-    padding-left: 30px;
+    padding-left: 20px;
   }
 
   .section-how-take {
@@ -1891,18 +1914,27 @@ body {
     display: none;
   }
 
+  .section__text {
+    font-size: 22px;
+  }
+
   .section-banner {
     padding-bottom: 0;
     padding-top: 90px;
   }
 
-  .section-banner .container {
-    flex-wrap: wrap;
+  .section-banner .advantage {
+    width: 92px;
+    height: 92px;
   }
 
-  .section-banner .wrap-img {
-    margin: 0 auto;
-    width: 65%;
+  .section-banner .substrate {
+    width: 82px;
+    height: 82px;
+  }
+
+  .section-banner .container {
+    flex-wrap: wrap;
   }
 
   .section-banner .left-content,
@@ -1912,6 +1944,11 @@ body {
 
   .section-banner .left-content {
     padding-right: 0;
+  }
+
+  .section-banner .left-content .wrap-img {
+    width: 65%;
+    margin: 0 auto;
   }
 
   .section-banner .text-content .title-site {
@@ -1928,6 +1965,8 @@ body {
     border-left: none;
     border-right: none;
     justify-content: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
   }
 
   .section-banner .advantage {
@@ -1968,11 +2007,155 @@ body {
     right: 0;
   }
 
+  .section-banner .images-list__item {
+    margin-bottom: 10px;
+  }
+
   .swiper-wrapper {
     padding-top: 15px;
   }
 
+  .section-how-works .preparation-card__description {
+    font-size: 33px;
+  }
+
+  .section-how-works .preparation-card:nth-child(n) .preparation-card__description {
+    border-radius: 25px;
+  }
+
+  .section-apply .images-list__item {
+    width: 50%;
+  }
+
+  .section-apply .pain-syndrome-list__item .syndrom {
+    font-size: 24px;
+    padding-left: 35px;
+    padding-right: 20px;
+  }
+
+  .section-apply .pain-syndrome-list__item .syndrom:before {
+    left: 20px;
+  }
+
   .section-how-take .take-card {
     margin-left: auto;
+  }
+
+  .section-how-take .take-list .swiper-slide {
+    padding-right: 80px;
+  }
+
+  .section-information .types-headache {
+    width: 100%;
+    padding-left: 40px;
+  }
+
+  .section-information .types-headache .swiper-slide {
+    min-width: 300px;
+  }
+
+  .section-reasons .left-content,
+  .section-reasons .right-content {
+    width: 100%;
+    padding: 0 40px;
+  }
+
+  .section-reasons .block-gradient-bg,
+  .section-reasons .left-content .text-content {
+    background-image: none;
+    padding: 0;
+  }
+
+  .section-reasons .left-content .text-content,
+  .section-reasons .block-gradient-bg,
+  .section-reasons .factors-box {
+    max-width: 640px;
+    margin: 0 auto;
+  }
+
+  .section-reasons .factors-list {
+    max-width: 480px;
+    margin: auto;
+  }
+
+  .section-reasons .factors-list__item {
+    max-width: none;
+  }
+
+  .header .container {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .header .lang-dropdown {
+    position: absolute;
+    left: 320px;
+    transform: translateX(-100%);
+    width: 65px;
+  }
+
+  .header .lang-dropdown .dropbtn {
+    display: none;
+  }
+
+  .header .lang-dropdown .dropdown-content {
+    display: block;
+  }
+
+  .header .lang-dropdown .dropdown-content a {
+    margin-bottom: 10px;
+    border-bottom: none;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .title {
+    font-size: 28px;
+  }
+
+  .section__title {
+    font-size: 28px;
+  }
+
+  .medicament-name_middle {
+    font-size: 32px;
+  }
+
+  .section__text {
+    font-size: 18px;
+  }
+
+  .section-how-works .preparation-card__description {
+    font-size: 24px;
+  }
+
+  .section-apply .container {
+    flex-wrap: wrap;
+  }
+
+  .section-apply .left-part,
+  .section-apply .right-part {
+    padding-left: 40px;
+    padding-right: 40px;
+    width: 100%;
+  }
+
+  .section-apply .images-list__item {
+    width: 33.33%;
+  }
+
+  .section-information,
+  .section-information .section__text {
+    font-size: 18px;
+  }
+
+  .section-reasons .factors-list__item {
+    width: 47.5%;
+  }
+}
+
+@media only screen and (max-width: 440px) {
+  .section-apply .images-list__item {
+    width: 50%;
   }
 }

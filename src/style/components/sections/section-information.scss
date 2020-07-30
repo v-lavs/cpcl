@@ -10,6 +10,8 @@
   .sub-title {
     margin: 0 auto 100px;
     max-width: 1200px;
+    padding-left: 30px;
+    padding-right: 30px;
   }
 
   .section__title {
@@ -138,7 +140,6 @@
 
     .manifestations {
       max-width: 1600px;
-      //width: 80%;
       margin: 0 auto;
       display: flex;
       justify-content: space-between;
@@ -223,6 +224,7 @@
   .swiper-slide {
     padding: 0 10px;
     width: 33.33%;
+    height: auto;
     display: flex;
     justify-content: center;
 
@@ -333,3 +335,26 @@
     }
   }
 }
+
+@include respond-to($md) {
+  .section-information {
+    .types-headache {
+      width: 100%;
+      padding-left: 40px;
+
+      .swiper-slide {
+        min-width: 300px;
+      }
+    }
+  }
+}
+
+@include respond-to($sm) {
+  .section-information {
+    &,
+    & .section__text {
+      font-size: 18px;
+    }
+  }
+}
+

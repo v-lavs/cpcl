@@ -44,7 +44,7 @@ body {
   margin-bottom: 24px;
 }
 
-.title-site_mobile{
+.title-site_mobile {
   font-family: $primary-fonts;
   text-transform: uppercase;
   font-style: italic;
@@ -115,6 +115,9 @@ body {
   font-weight: 400;
   font-size: 35px;
   text-transform: uppercase;
+  @include respond-to($sm) {
+    font-size: 28px;
+  }
 }
 
 .color-gray {
@@ -124,7 +127,8 @@ body {
 .color-orange {
   color: #ff7500;
 }
-.color-violet{
+
+.color-violet {
   color: #9e4ad3;
 }
 
@@ -167,33 +171,66 @@ body {
   position: absolute;
   width: 110%;
   height: 110%;
+  pointer-events: none;
   z-index: -1;
-  .img-parallax{
+
+  .img-parallax {
     position: absolute;
     width: auto;
   }
 }
 
-@media screen and (max-width: 1200px){
-  .title-site{
+
+.swiper-pagination {
+  padding-top: 15px;
+  bottom: 0 !important;
+
+
+  .swiper-pagination-bullet {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 0 12px;
+}
+
+@media screen and (max-width: 1200px) {
+  .title-site {
     font-size: 35px;
   }
-  .section__title{
+  .section__title {
     font-size: 34px;
   }
-  .medicament-name_middle{
+  .medicament-name_middle {
     font-size: 40px;
   }
-  .section{
+  .section {
     padding-top: 60px;
   }
 }
 
 @include respond-to($md) {
-  .title-site_mobile{
+  .title-site_mobile {
     display: block;
   }
-  .title-site{
+  .title-site {
     display: none;
+  }
+  .section__text {
+    font-size: 22px;
+  }
+}
+
+@include respond-to($sm) {
+  .section__title {
+    font-size: 28px;
+  }
+  .medicament-name_middle {
+    font-size: 32px;
+  }
+  .section__text {
+    font-size: 18px;
   }
 }
