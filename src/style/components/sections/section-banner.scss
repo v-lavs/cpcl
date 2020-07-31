@@ -24,12 +24,12 @@
       display: flex;
       width: 71.5%;
       margin-left: auto;
+
       img {
         margin: auto;
       }
     }
   }
-
 
 
   .banner-slider {
@@ -273,10 +273,12 @@
 @include respond-to($md) {
   .section-banner {
     padding-bottom: 0;
-    padding-top: 75px;
-    .swiper-container{
+    padding-top: 115px;
+
+    .swiper-container {
       padding-bottom: 0;
     }
+
     .advantage {
       width: 92px;
       height: 92px;
@@ -298,6 +300,7 @@
 
     .left-content {
       padding-right: 0;
+
       .wrap-img {
         width: 65%;
         margin: 0 auto;
@@ -347,7 +350,6 @@
 
     .mouse-parallax__bg-2 {
       .img-parallax {
-        position: absolute;
 
         &:first-child {
           display: none;
@@ -374,7 +376,44 @@
   .swiper-wrapper {
     padding-top: 15px;
   }
-.advantage-list__text{
-  font-size: 25px;
+  .advantage-list__text {
+    font-size: 25px;
+  }
 }
+
+@include respond-to($sm) {
+  .section-banner {
+    padding-top: 90px;
+
+    .mouse-parallax__bg {
+      .img-parallax {
+        &:first-child {
+          height: 241px;
+          top: 17%;
+          left: -25%;
+        }
+
+        &:nth-child(2) {
+          top: 20%;
+          height: 130px;
+          right: -6%;
+        }
+      }
+    }
+
+    .mouse-parallax__bg-2 {
+      .img-parallax {
+
+        &:nth-child(2) {
+          top: 42%;
+          left: -3%;
+        }
+
+        &:nth-child(3) {
+          height: 170px;
+          top: 39%;
+        }
+      }
+    }
+  }
 }

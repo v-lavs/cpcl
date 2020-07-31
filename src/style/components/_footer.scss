@@ -1,27 +1,9 @@
 .footer {
-  position: relative;
-  .link-contact {
-    position: absolute;
-    display: inline-block;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 12px;
-    font-weight: 400;
-    left: -100%;
-    z-index: 2;
-    span {
-      display: inline-block;
-      font-size: 20px;
-      font-weight: 500;
-      line-height: 0.5;
-      vertical-align: middle;
-      font-family: $primary-fonts;
-      margin-left: 10px;
-    }
-  }
+
   .top-row {
     margin-bottom: 45px;
     display: flex;
+    align-items: baseline;
     justify-content: space-between;
     background-image: linear-gradient(to bottom, #e5e5e5, #fbfbfb);
     padding: 20px 90px 20vh;
@@ -38,31 +20,31 @@
       font-weight: 700;
     }
 
-    //.link-contact {
-    //  position: absolute;
-    //  display: inline-block;
-    //  top: 50%;
-    //  transform: translateY(-50%);
-    //  font-size: 12px;
-    //  font-weight: 400;
-    //  left: -100%;
-    //  z-index: 2;
+    .contact__toggle {
+      position: absolute;
+      display: inline-block;
+      top: 50%;
+      transform: translateY(-36%);
+      font-size: 14px;
+      font-weight: 400;
+      left: -100%;
+      z-index: 2;
+      span {
+        display: inline-block;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 0.5;
+        vertical-align: middle;
+        font-family: $primary-fonts;
+        margin-left: 10px;
+        margin-bottom: 3px;
+      }
+    }
 
-      //span {
-      //  display: inline-block;
-      //  font-size: 20px;
-      //  font-weight: 500;
-      //  line-height: 0.5;
-      //  vertical-align: middle;
-      //  font-family: $primary-fonts;
-      //  margin-left: 10px;
-      //}
-    //}
-
-    //.heading {
-    //  position: relative;
-    //  padding: 0 30px;
-    //}
+    .heading {
+      position: relative;
+      padding: 0 30px;
+    }
   }
 
   .social-bar {
@@ -102,6 +84,9 @@
         display: inline-block;
       }
     }
+    .src-list_show{
+      display: block;
+    }
   }
 }
 
@@ -125,8 +110,29 @@
 @include respond-to($md) {
   .footer {
     .top-row {
+      justify-content: center;
+      padding-top: 35px;
       background-image: none;
       background-color: $white;
+      padding-bottom: 17vh;
+      .footer__title,
+      .social-bar,
+      .logo{
+        display: none;
+      }
+    }
+
+    .heading {
+
+      position: relative;
+      .contact__toggle{
+        font-size: 19px;
+        width: max-content;
+
+      }
+    }
+    .disclaimer {
+      padding: 15px 1.5% 33px;
     }
   }
 }

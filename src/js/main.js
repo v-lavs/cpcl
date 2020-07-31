@@ -152,6 +152,12 @@ $(document).ready(function () {
         slidersInit();
     });
 
+    //TOGGLE CONTACT INFO
+
+    $('.contact__toggle').click(function(e) {
+        e.preventDefault();
+        $(this).siblings('.src-list').toggleClass('src-list_show')
+    });
 });
 
 

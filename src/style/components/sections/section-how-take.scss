@@ -44,7 +44,7 @@
     margin: 0 auto;
     border-top: 2px solid $white;
     font-size: 26px;
-    font-family: $helper-font;
+    font-family: $secondary-fonts;
     padding-bottom: 55px;
   }
 
@@ -212,6 +212,9 @@
     }
     .section__text{
       max-width: 85%;
+    }
+    .section__title{
+      margin-bottom: 70px;
     }
   }
 }
