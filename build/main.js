@@ -150,7 +150,11 @@ $(document).ready(function () {
     $('.slider-additional-btns .slider-pagination__item').click(function (e) {
         e.preventDefault();
         var slideNumber = $(this).data('slide') || 0;
-        preparationsSlider.slideTo(Number(slideNumber))
+        preparationsSlider.slideTo(Number(slideNumber));
+        //scroll to element
+        $([document.documentElement, document.body]).animate({
+            scrollTop: $("#preparationsSlider").offset().top - 200
+        }, 300);
     });
 
     // PAIN SYMPTOMS Hover block

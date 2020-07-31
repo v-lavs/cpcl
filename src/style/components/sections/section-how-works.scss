@@ -61,6 +61,7 @@ $slider-top-offset: 200;
 
   .section-bg_mobile {
     display: none;
+
     img {
       max-width: none;
       width: 100%;
@@ -251,17 +252,21 @@ $slider-top-offset: 200;
     .section-bg_desktop {
       max-width: 800px;
     }
+
     .preparation-card {
       max-width: 280px;
+
       &:first-child {
         top: -300px;
         left: 10vw;
       }
+
       &:last-child {
         top: -300px;
         right: 12vw;
       }
     }
+
     .preparation-card__description {
       font-size: 14px;
     }
@@ -322,6 +327,7 @@ $slider-top-offset: 200;
     .section-bg_mobile {
       position: relative;
       display: block;
+
       .slider-additional-btns {
         position: absolute;
         width: 54%;
@@ -330,7 +336,7 @@ $slider-top-offset: 200;
         left: 50%;
         transform: translateX(-50%);
         z-index: 1;
-        
+
         a {
           display: flex;
           width: 40px;
@@ -338,9 +344,11 @@ $slider-top-offset: 200;
           background: url('../assets/img/plus.svg') no-repeat center;
           -webkit-background-size: 100%;
           background-size: 100%;
+
           &:nth-child(2) {
             align-self: flex-end;
           }
+
           &:last-child {
             margin-right: 5%;
           }
@@ -425,6 +433,16 @@ $slider-top-offset: 200;
 @media screen and (max-width: 580px) {
   .section-how-works {
     padding-bottom: 20px;
+
+    .section-bg_mobile .slider-additional-btns a {
+      width: 30px;
+      height: 30px;
+      margin-bottom: 10px;
+
+      &:nth-child(2) {
+        margin-bottom: -8px;
+      }
+    }
   }
 }
 
@@ -433,9 +451,11 @@ $slider-top-offset: 200;
     .swiper-container {
       padding-left: 20px;
     }
+
     .preparation-card__title {
       min-height: 100px;
     }
+
     .preparation-card__description {
       padding-left: 50px;
       padding-right: 30px;
@@ -456,31 +476,17 @@ $slider-top-offset: 200;
     font-size: 16px;
   }
 }
-@media screen and (max-width: 480px) {
+
+
+@media screen and (max-width: 380px) {
   .section-how-works {
-    .swiper-container {
-      padding-left: 20px;
-    }
-    .preparation-card__title {
-      min-height: 100px;
-    }
-    .preparation-card__description {
-      padding-left: 50px;
-      padding-right: 30px;
-    }
-
-    .description__item {
-      font-size: 20px;
-
-      &:before {
-        left: -25px;
+    .section-bg_mobile .slider-additional-btns a {
+      width: 25px;
+      height: 25px;
+      &:nth-child(2) {
+        margin-bottom: -5px;
       }
     }
   }
 }
 
-@include respond-to($xs) {
-  .section-how-works .description__item {
-    font-size: 16px;
-  }
-}

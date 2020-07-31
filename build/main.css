@@ -1149,6 +1149,7 @@ body {
 }
 
 .section-information .manifestation__item .img-wrap {
+  position: relative;
   display: inline-block;
   width: 30px;
   margin: 0 30px;
@@ -1160,6 +1161,10 @@ body {
   height: auto;
   -webkit-filter: grayscale(1) opacity(0.5);
   filter: grayscale(1) opacity(0.5);
+}
+
+.section-information .manifestation__item:hover .img-wrap:before {
+  opacity: 1;
 }
 
 .section-information .manifestation__item:before,
@@ -2853,7 +2858,8 @@ body {
   }
 
   .popup {
-    width: 70%;
+    max-width: 480px;
+    font-size: 16px;
   }
 
   .header .container {
@@ -2873,6 +2879,16 @@ body {
 @media screen and (max-width: 580px) {
   .section-how-works {
     padding-bottom: 20px;
+  }
+
+  .section-how-works .section-bg_mobile .slider-additional-btns a {
+    width: 30px;
+    height: 30px;
+    margin-bottom: 10px;
+  }
+
+  .section-how-works .section-bg_mobile .slider-additional-btns a:nth-child(2) {
+    margin-bottom: -8px;
   }
 
   .section-apply .left-part {
@@ -2969,27 +2985,6 @@ body {
   .section-how-works .description__item:before {
     left: -25px;
   }
-
-  .section-how-works .swiper-container {
-    padding-left: 20px;
-  }
-
-  .section-how-works .preparation-card__title {
-    min-height: 100px;
-  }
-
-  .section-how-works .preparation-card__description {
-    padding-left: 50px;
-    padding-right: 30px;
-  }
-
-  .section-how-works .description__item {
-    font-size: 20px;
-  }
-
-  .section-how-works .description__item:before {
-    left: -25px;
-  }
 }
 
 @media only screen and (max-width: 440px) {
@@ -3006,10 +3001,6 @@ body {
 
   .medicament-name_middle {
     font-size: 36px;
-  }
-
-  .section-how-works .description__item {
-    font-size: 16px;
   }
 
   .section-how-works .description__item {
@@ -3166,6 +3157,15 @@ body {
 }
 
 @media screen and (max-width: 380px) {
+  .section-how-works .section-bg_mobile .slider-additional-btns a {
+    width: 25px;
+    height: 25px;
+  }
+
+  .section-how-works .section-bg_mobile .slider-additional-btns a:nth-child(2) {
+    margin-bottom: -5px;
+  }
+
   .section-information .manifestations-pain {
     font-size: 14px;
   }
