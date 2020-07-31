@@ -11,56 +11,70 @@
   left: 50%;
   transform: translate(-50%, -50%);
   display: none;
-  z-index: 1100;
   padding: 5px;
   font-family: $secondary-fonts;
-}
-.popup-blue{
-  background-image: linear-gradient(to right top, #7fdbfa, #81c6ff);
-  -webkit-box-shadow: 0 12px 20px 5px rgba(129, 198, 255, 0.35);
-  box-shadow: 0 12px 20px 5px rgba(129, 198, 255, 0.35);
-}
-.popup-purple{
-  background-image: linear-gradient(to right top, #8987fc, #a48aff);
-  -webkit-box-shadow: 0 12px 20px 5px rgba(164, 135, 255, 0.35);
-  box-shadow: 0 12px 20px 5px rgba(164, 135, 255, 0.35);
-}
-.popup.active {
-  display: block;
-}
-.popup .popup-header {
-  background: #fff;
-  padding: 30px;
-  color: #000;
-  text-transform: uppercase;
-  text-align: center;
-  position: relative;
+  overflow-y: auto;
+  max-height: 100%;
+  font-size: 20px;
+  z-index: 1100;
 
-}
-.popup .popup-content {
-  padding: 50px 50px 25px;
-  background-color: #fff;
-}
-.popup-close {
-  width: 30px;
-  height: 30px;
-  position: absolute;
-  top: 33px;
-  right: 30px;
-  cursor: pointer;
-  display: block;
+  .popup-title {
+    color: #f46a00;
+    font-size: 2em;
+    margin-bottom: 1em;
+  }
 
-}
-.popup .popup-title{
-  color: #f46a00;
-}
-.popup .popup-title-blue{
-  color: #1cadff;
+  &.active {
+    display: block;
+  }
+
+  .popup-header {
+    background: #fff;
+    padding: 30px;
+    color: #000;
+    text-transform: uppercase;
+    text-align: center;
+    position: relative;
+  }
+
+  .popup-content {
+    padding: 1em 1.5em 1em;
+    background-color: #fff;
+    p {
+      margin-bottom: 1em;
+    }
+  }
+
+  .popup-close {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 33px;
+    right: 30px;
+    cursor: pointer;
+    display: block;
+  }
+  &-blue {
+    background-image: linear-gradient(to right top, #7fdbfa, #81c6ff);
+    -webkit-box-shadow: 0 12px 20px 5px rgba(129, 198, 255, 0.35);
+    box-shadow: 0 12px 20px 5px rgba(129, 198, 255, 0.35);
+
+    .popup-title {
+      color: #1cadff;
+    }
+  }
+
+  &-purple {
+    background-image: linear-gradient(to right top, #8987fc, #a48aff);
+    -webkit-box-shadow: 0 12px 20px 5px rgba(164, 135, 255, 0.35);
+    box-shadow: 0 12px 20px 5px rgba(164, 135, 255, 0.35);
+    .popup-title {
+      color: #8f41e3;
+    }
+  }
 }
 
-.popup .popup-title-purple{
-  color: #8f41e3;
-}
+
 #overlay {
   display: none;
   position: fixed;
@@ -74,8 +88,9 @@
 }
 
 @include respond-to($sm) {
-  .popup{
-    width: 70%;
+  .popup {
+    max-width: 480px;
+    font-size: 16px;
   }
 }
 

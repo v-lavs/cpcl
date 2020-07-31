@@ -163,7 +163,6 @@ $(document).ready(function () {
         $imagesList.removeClass('active');
         $(this).addClass('active');
         $('[data-id=' + $(this).data('for') + ']').addClass('active-syndrom');
-        console.log($(this).data('for'));
     });
 
     $(window).on('resize', function () {
@@ -172,42 +171,35 @@ $(document).ready(function () {
 
     //TOGGLE CONTACT INFO
 
-    $('.contact__toggle').click(function(e) {
+    $('.contact__toggle').click(function (e) {
         $('.footer .bottom-row').toggle()
     });
 
 
     //POPUP
-    jQuery("#popup-trigger").click(function(e) {
-        e.preventDefault(),
-            jQuery("#popup").addClass("active"),
-            jQuery("#overlay").fadeIn(),
-            jQuery("#popup-close, #overlay").click(function(e) {
-                e.preventDefault(),
-                    jQuery("#popup").removeClass("active"),
-                    jQuery("#overlay").fadeOut()
-            })
+    var $contentBlock = $('#popup .popup-content');
+
+
+    $(".popup-trigger").click(function (e) {
+        e.preventDefault();
+        console.log(12343)
+        var theme = $(this).data('theme');
+        var contentId = $(this).data('content-id');
+        var content = $('#' + contentId).html();
+
+        $contentBlock.html(content);
+
+        $("#popup").addClass(theme).addClass("active");
+        $("#overlay").fadeIn();
     });
-    jQuery("#popup-blue-trigger").click(function(e) {
-        e.preventDefault(),
-            jQuery("#popup-blue").addClass("active"),
-            jQuery("#overlay").fadeIn(),
-            jQuery("#popup-blue-close, #overlay").click(function(e) {
-                e.preventDefault(),
-                    jQuery("#popup-blue").removeClass("active"),
-                    jQuery("#overlay").fadeOut()
-            })
-    });
-    jQuery("#popup-purple-trigger").click(function(e) {
-        e.preventDefault(),
-            jQuery("#popup-purple").addClass("active"),
-            jQuery("#overlay").fadeIn(),
-            jQuery("#popup-purple-close, #overlay").click(function(e) {
-                e.preventDefault(),
-                    jQuery("#popup-purple").removeClass("active"),
-                    jQuery("#overlay").fadeOut()
-            })
-    });
+
+    $("#popup-close, #overlay").click(function (e) {
+        e.preventDefault();
+        $("#popup").removeClass("active");
+        $("#overlay").fadeOut();
+        $contentBlock.html();
+    })
+
 });
 
 

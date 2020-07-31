@@ -477,10 +477,28 @@
                                     <p class="card-types__text">
                                         Найпоширеніша форма головного болю у світі. Характерний для обох статей...
                                     </p>
-                                    <a href="#" id="popup-trigger" class="btn">Читати далі</a>
+                                    <a href="#" class="btn popup-trigger" data-theme="" data-content-id="headacheContent">Читати далі</a>
                                 </div>
                             </div>
+
+                            <template id="headacheContent">
+                                <h2 class="popup-title">Головний біль напруги</h2>
+
+                                <article>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet doloremque facere fugit impedit itaque
+                                        labore
+                                        odio, suscipit tempore. Accusamus autem error et facere Lorem ipsum dolor sit amet, consectetur adipisicing
+                                        Asperiores culpa eius nesciunt provident quos repellendus reprehenderit, sapiente suscipit ut veniam? Lorem
+                                        ipsum dolor sit amet, consectetur adipisicing elit. Debitis esse perferendis quis?
+                                    </p>
+                                    <p>Amet, animi aspernatur at
+                                        beatae consectetur enim impedit minus molestiae nulla odio placeat provident quisquam rerum saepe, totam
+                                        vitae voluptate voluptates! Accusamus aliquam aut commodi, deserunt eum incidunt ipsa iure nesciunt non
+                                        officia praesentium repellendus sequi tempore ut.</p>
+                                </article>
+                            </template>
                         </div>
+
                         <div class="swiper-slide">
                             <div class="card-types">
                                 <div class="gradient-wrap">
@@ -494,10 +512,28 @@
                                     <p class="card-types__text">
                                         Вдвічі частіше зустрічається у жінок. Найчастіше є однобічною, пульсуючою...
                                     </p>
-                                    <a href="#" id="popup-blue-trigger" class="btn">Читати далі</a>
+                                    <a href="#" data-theme="popup-blue" class="popup-trigger btn" data-content-id="migrenContent">Читати далі</a>
                                 </div>
                             </div>
+
+                            <template id="migrenContent">
+                                <h2 class="popup-title">Мігрень</h2>
+
+                                <article>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet doloremque facere fugit impedit itaque
+                                        labore
+                                        odio, suscipit tempore. Accusamus autem error et facere Lorem ipsum dolor sit amet, consectetur adipisicing
+                                        Asperiores culpa eius nesciunt provident quos repellendus reprehenderit, sapiente suscipit ut veniam? Lorem
+                                        ipsum dolor sit amet, consectetur adipisicing elit. Debitis esse perferendis quis?
+                                    </p>
+                                    <p>Amet, animi aspernatur at
+                                        beatae consectetur enim impedit minus molestiae nulla odio placeat provident quisquam rerum saepe, totam
+                                        vitae voluptate voluptates! Accusamus aliquam aut commodi, deserunt eum incidunt ipsa iure nesciunt non
+                                        officia praesentium repellendus sequi tempore ut.</p>
+                                </article>
+                            </template>
                         </div>
+
                         <div class="swiper-slide">
                             <div class="card-types">
                                 <div class="gradient-wrap">
@@ -511,9 +547,27 @@
                                     <p class="card-types__text">
                                         Сильний біль, що частіше виникає у чоловіків віком 20-50 років. Він...
                                     </p>
-                                    <a href="#" id="popup-purple-trigger"  class="btn">Читати далі</a>
+                                    <a href="#" data-theme="popup-purple" data-content-id="painContent"  class="popup-trigger btn">Читати далі</a>
                                 </div>
                             </div>
+
+                            <template id="painContent">
+                                <h2 class="popup-title">Кластерний головний біль</h2>
+
+                                <article>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet doloremque facere fugit impedit itaque
+                                        labore
+                                        odio, suscipit tempore. Accusamus autem error et facere Lorem ipsum dolor sit amet, consectetur adipisicing
+                                        Asperiores culpa eius nesciunt provident quos repellendus reprehenderit, sapiente suscipit ut veniam? Lorem
+                                        ipsum dolor sit amet, consectetur adipisicing elit. Debitis esse perferendis quis?
+                                    </p>
+                                    <p>Amet, animi aspernatur at
+                                        beatae consectetur enim impedit minus molestiae nulla odio placeat provident quisquam rerum saepe, totam
+                                        vitae voluptate voluptates! Accusamus aliquam aut commodi, deserunt eum incidunt ipsa iure nesciunt non
+                                        officia praesentium repellendus sequi tempore ut.</p>
+                                </article>
+                            </template>
+
                         </div>
                     </div>
                     <!-- Add Pagination -->
@@ -693,80 +747,22 @@
             <img class="footer__text-img" src="./assets/img/footer-text.png" alt="">
         </div>
     </footer>
-
 </div>
+
+
 
 <div class="popup" id="popup">
     <div class="popup-header">
         <span class="popup-close" id="popup-close">
             <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
                  viewBox="0 0 20 20">
-                <title>close</title>
                 <path d="M10 8.586l-7.071-7.071-1.414 1.414 7.071 7.071-7.071 7.071 1.414 1.414 7.071-7.071 7.071 7.071 1.414-1.414-7.071-7.071 7.071-7.071-1.414-1.414-7.071 7.071z"></path>
             </svg>
         </span>
-
-        <h2 class="popup-title">Головний біль напруги</h2>
     </div>
-    <div class="popup-content">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet doloremque facere fugit impedit itaque
-            labore
-            odio, suscipit tempore. Accusamus autem error et facere Lorem ipsum dolor sit amet, consectetur adipisicing
-            Asperiores culpa eius nesciunt provident quos repellendus reprehenderit, sapiente suscipit ut veniam? Lorem
-            ipsum dolor sit amet, consectetur adipisicing elit. Debitis esse perferendis quis? Amet, animi aspernatur at
-            beatae consectetur enim impedit minus molestiae nulla odio placeat provident quisquam rerum saepe, totam
-            vitae voluptate voluptates! Accusamus aliquam aut commodi, deserunt eum incidunt ipsa iure nesciunt non
-            officia praesentium repellendus sequi tempore ut.
-        </p>
-
-    </div>
+    <div class="popup-content"></div>
 </div>
-<div class="popup popup-blue" id="popup-blue">
-    <div class="popup-header">
-        <span class="popup-close" id="popup-blue-close">
-            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                 viewBox="0 0 20 20">
-                <title>close</title>
-                <path d="M10 8.586l-7.071-7.071-1.414 1.414 7.071 7.071-7.071 7.071 1.414 1.414 7.071-7.071 7.071 7.071 1.414-1.414-7.071-7.071 7.071-7.071-1.414-1.414-7.071 7.071z"></path>
-            </svg>
-        </span>
 
-        <h2 class="popup-title popup-title-blue">Мігрень</h2>
-    </div>
-    <div class="popup-content">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet doloremque facere fugit impedit itaque
-            labore
-            odio, suscipit tempore. Accusamus autem error et facere Lorem ipsum dolor sit amet, consectetur adipisicing
-            Asperiores culpa eius nesciunt provident quos repellendus reprehenderit, sapiente suscipit ut veniam? Lorem
-            ipsum dolor sit amet, consectetur adipisicing elit. Debitis esse perferendis quis? Amet, animi aspernatur at
-
-        </p>
-
-    </div>
-</div>
-<div class="popup popup-purple" id="popup-purple">
-    <div class="popup-header">
-          <span class="popup-close" id="popup-purple-close">
-            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                 viewBox="0 0 20 20">
-                <title>close</title>
-                <path d="M10 8.586l-7.071-7.071-1.414 1.414 7.071 7.071-7.071 7.071 1.414 1.414 7.071-7.071 7.071 7.071 1.414-1.414-7.071-7.071 7.071-7.071-1.414-1.414-7.071 7.071z"></path>
-            </svg>
-        </span>
-
-        <h2 class="popup-title popup-title-purple">кластерний головний біль</h2>
-    </div>
-    <div class="popup-content">
-        <p> Accusamus autem error et facere Lorem ipsum dolor sit amet, consectetur adipisicing
-            Asperiores culpa eius nesciunt provident quos repellendus reprehenderit, sapiente suscipit ut veniam? Lorem
-            ipsum dolor sit amet, consectetur adipisicing elit. Debitis esse perferendis quis? Amet, animi aspernatur at
-            beatae consectetur enim impedit minus molestiae nulla odio placeat provident quisquam rerum saepe, totam
-            vitae voluptate voluptates! Accusamus aliquam aut commodi, deserunt eum incidunt ipsa iure nesciunt non
-            officia praesentium repellendus sequi tempore ut.
-        </p>
-
-    </div>
-</div>
 <div id="overlay"></div>
 
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>

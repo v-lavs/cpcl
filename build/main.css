@@ -1580,21 +1580,18 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   display: none;
-  z-index: 1100;
   padding: 5px;
   font-family: "Affect", sans-serif;
+  overflow-y: auto;
+  max-height: 100%;
+  font-size: 20px;
+  z-index: 1100;
 }
 
-.popup-blue {
-  background-image: linear-gradient(to right top, #7fdbfa, #81c6ff);
-  -webkit-box-shadow: 0 12px 20px 5px rgba(129, 198, 255, 0.35);
-  box-shadow: 0 12px 20px 5px rgba(129, 198, 255, 0.35);
-}
-
-.popup-purple {
-  background-image: linear-gradient(to right top, #8987fc, #a48aff);
-  -webkit-box-shadow: 0 12px 20px 5px rgba(164, 135, 255, 0.35);
-  box-shadow: 0 12px 20px 5px rgba(164, 135, 255, 0.35);
+.popup .popup-title {
+  color: #f46a00;
+  font-size: 2em;
+  margin-bottom: 1em;
 }
 
 .popup.active {
@@ -1611,11 +1608,15 @@ body {
 }
 
 .popup .popup-content {
-  padding: 50px 50px 25px;
+  padding: 1em 1.5em 1em;
   background-color: #fff;
 }
 
-.popup-close {
+.popup .popup-content p {
+  margin-bottom: 1em;
+}
+
+.popup .popup-close {
   width: 30px;
   height: 30px;
   position: absolute;
@@ -1625,15 +1626,23 @@ body {
   display: block;
 }
 
-.popup .popup-title {
-  color: #f46a00;
+.popup-blue {
+  background-image: linear-gradient(to right top, #7fdbfa, #81c6ff);
+  -webkit-box-shadow: 0 12px 20px 5px rgba(129, 198, 255, 0.35);
+  box-shadow: 0 12px 20px 5px rgba(129, 198, 255, 0.35);
 }
 
-.popup .popup-title-blue {
+.popup-blue .popup-title {
   color: #1cadff;
 }
 
-.popup .popup-title-purple {
+.popup-purple {
+  background-image: linear-gradient(to right top, #8987fc, #a48aff);
+  -webkit-box-shadow: 0 12px 20px 5px rgba(164, 135, 255, 0.35);
+  box-shadow: 0 12px 20px 5px rgba(164, 135, 255, 0.35);
+}
+
+.popup-purple .popup-title {
   color: #8f41e3;
 }
 
