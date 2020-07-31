@@ -57,6 +57,7 @@
     align-items: center;
     min-height: 70px;
     border: 1px solid #cccccc;
+    background-color: #fff;
     padding: 10px 30px 10px 70px;
     width: 100%;
     border-radius: 0 2em 2em 0;
@@ -296,6 +297,7 @@
     .left-content,
     .text-content {
       width: 100%;
+      padding-right: 0;
     }
 
     .left-content {

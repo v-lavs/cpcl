@@ -160,7 +160,8 @@
         filter: grayscale(1) opacity(.5);
       }
     }
-    .slash-img{
+
+    .slash-img {
 
     }
 
@@ -201,7 +202,6 @@
 
   .mouse-parallax__bg {
     .img-parallax {
-      //bottom:1.5%;
       top: 87%;
       left: 0;
       height: 180px;
@@ -343,13 +343,14 @@
 
 @include respond-to($md) {
   .section-information {
+    .card-types {
+      max-width: 100%;
+    }
+
     .types-headache {
       width: 100%;
       padding-left: 40px;
-
-      .swiper-slide {
-        min-width: 300px;
-      }
+      margin-bottom: 60px;
     }
 
     .section-bg_mobile {
@@ -359,8 +360,39 @@
     .section-bg_desktop {
       display: none;
     }
-  }
 
+    .swiper-slide {
+      width: 440px;
+
+      .btn {
+        font-size: 23px;
+      }
+    }
+
+    .card-types:after {
+      height: 9px;
+    }
+
+    .card-types__title {
+      font-size: 34px;
+      padding-right: 10px;
+    }
+
+    .counter-number {
+      font-size: 85px;
+    }
+
+    .card-types__text {
+      font-size: 25px;
+    }
+
+    .section__text {
+      font-size: 25px;
+      font-weight: 700;
+      max-width: 640px;
+      margin: 0 auto;
+    }
+  }
 }
 
 @include respond-to($sm) {
@@ -391,18 +423,83 @@
       font-size: 34px;
     }
 
-    .counter-number {
-      font-size: 85px;
-    }
-
     .mouse-parallax__bg {
       display: none;
     }
 
     .section__text {
-      max-width: 75%;
       font-size: 22px;
       font-weight: 700;
+    }
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .section-information {
+    .swiper-slide {
+      width: 320px;
+
+      .btn {
+        font-size: 20px;
+      }
+    }
+
+    .card-types__title {
+      font-size: 26px;
+    }
+
+    .counter-number {
+      font-size: 65px;
+    }
+
+    .card-types__heading,
+    .card-types__body {
+      padding: 0;
+    }
+
+    .card-types__text {
+      font-size: 18px;
+    }
+  }
+}
+
+@include respond-to($xs) {
+  .section-information {
+    .types-headache {
+      padding-left: 15px;
+    }
+
+    .section__text {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+
+    .section__title {
+      margin-bottom: 10px;
+    }
+
+    .title {
+      font-size: 24px;
+    }
+
+    .manifestations-pain {
+      font-size: 16px;
+    }
+
+    .manifestation__item:first-child .manifestations {
+      padding: 0 30px;
+    }
+
+    .manifestation__item .img-wrap {
+      margin: 0 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .section-information {
+    .manifestations-pain {
+      font-size: 14px;
     }
   }
 }

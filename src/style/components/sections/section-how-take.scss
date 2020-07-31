@@ -70,7 +70,7 @@
 
     .swiper-slide {
       width: auto;
-      padding: 0 10px;
+      padding: 0 15px;
     }
   }
 
@@ -153,8 +153,18 @@
       background-size: 36%;
     }
 
+    .section__text {
+      max-width: 640px;
+      padding: 0 20px;
+    }
+
     .take-card {
       margin-left: auto;
+      max-width: 270px;
+
+      &__body {
+        font-size: 30px;
+      }
     }
 
     .take-list .swiper-slide {
@@ -210,11 +220,32 @@
       background-size: 59%;
       background-position: -22.5% bottom;
     }
-    .section__text{
-      max-width: 85%;
-    }
-    .section__title{
+
+    .section__title {
       margin-bottom: 70px;
+    }
+  }
+}
+
+@include respond-to($xs) {
+  .section-how-take {
+    .section__text {
+
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+
+    .take-list .swiper-slide {
+      padding: 0 50px;
+    }
+
+    .take-card {
+      margin-right: auto;
+      max-width: 240px;
+    }
+
+    .take-card__body {
+      font-size: 24px;
     }
   }
 }

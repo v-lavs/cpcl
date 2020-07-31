@@ -63,12 +63,11 @@ $(document).ready(function () {
     var preparationsSlider;
 
     function slidersInit() {
-        if ($(window).width() <= 1040) {
+        if ($(window).width() <= 1080) {
             if (!bannerSlider) {
                 bannerSlider = new Swiper('.banner-slider', {
-
                     pagination: {
-                        el: '.swiper-pagination',
+                        el: '.banner-slider .swiper-pagination',
                         clickable: true,
                     }
                 });
@@ -85,21 +84,25 @@ $(document).ready(function () {
                         el: '.swiper-pagination',
                         clickable: true,
                     },
+                    navigation: {
+                        nextEl: '#instructionSlider .swiper-button-next',
+                        prevEl: '#instructionSlider .swiper-button-prev',
+                    },
                 });
             }
             if (!headAcheTypesSlider) {
                 headAcheTypesSlider = new Swiper('#headAcheTypesSlider', {
                     slidesPerView: 'auto',
-                    spaceBetween: 50,
+                    spaceBetween: 20,
+                    breakpoints: {
+                        767: {
+                            spaceBetween: 50,
+                        },
+                    },
                     pagination: {
                         el: '.swiper-pagination',
                         clickable: true,
                     },
-                    navigation: {
-                        nextEl: '.swiper-button-next',
-                        prevEl: '.swiper-button-prev',
-                    },
-
                 });
             }
             if (!preparationsSlider) {
@@ -107,8 +110,13 @@ $(document).ready(function () {
                     slidesPerView: 'auto',
                     spaceBetween: 50,
                     loop: false,
+                    breakpoints: {
+                        320: {
+                            spaceBetween: 30
+                        }
+                    },
                     pagination: {
-                        el: '.helper-wrapper .swiper-pagination',
+                        el: '#preparationsSlider .swiper-pagination',
                         clickable: true,
                     },
                 });
@@ -135,6 +143,12 @@ $(document).ready(function () {
 
     slidersInit();
 
+    $('.slider-additional-btns .slider-pagination__item').click(function (e) {
+        e.preventDefault();
+        var slideNumber = $(this).data('slide') || 0;
+        preparationsSlider.slideTo(Number(slideNumber))
+    });
+
     // PAIN SYMPTOMS Hover block
 
     var $imagesList = $('#pain-syndrom-imgs .link-syndrom');
@@ -155,8 +169,7 @@ $(document).ready(function () {
     //TOGGLE CONTACT INFO
 
     $('.contact__toggle').click(function(e) {
-        e.preventDefault();
-        $(this).siblings('.src-list').toggleClass('src-list_show')
+        $('.footer .bottom-row').toggle()
     });
 });
 

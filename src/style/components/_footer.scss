@@ -1,12 +1,12 @@
 .footer {
-
+  padding-bottom: 20vh;
+  margin-bottom: 45px;
   .top-row {
-    margin-bottom: 45px;
     display: flex;
     align-items: baseline;
     justify-content: space-between;
     background-image: linear-gradient(to bottom, #e5e5e5, #fbfbfb);
-    padding: 20px 90px 20vh;
+    padding: 20px 90px 20px;
 
     .logo {
       width: 134px;
@@ -69,23 +69,31 @@
   }
 
   .bottom-row {
-    background-color: $white;
+    display: none;
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px 20px 0;
     font-size: 11px;
     font-family: $secondary-fonts;
-
+    .src-heading {
+      font-size: 24px;
+      margin-bottom: 15px;
+    }
     .src-list {
-      display: none;
-      width: 90%;
-      margin: 0 auto;
-      text-align: center;
+      padding-left: 15px;
+      li {
+        list-style: decimal;
+        margin-bottom: 10px;
+        line-height: 1.5;
+      }
 
       a {
-        color: inherit;
         display: inline-block;
+        color: inherit;
+        &:hover {
+          text-decoration: underline;
+        }
       }
-    }
-    .src-list_show{
-      display: block;
     }
   }
 }
@@ -109,12 +117,12 @@
 
 @include respond-to($md) {
   .footer {
+    padding-bottom: 17vh;
     .top-row {
       justify-content: center;
       padding-top: 35px;
       background-image: none;
       background-color: $white;
-      padding-bottom: 17vh;
       .footer__title,
       .social-bar,
       .logo{
