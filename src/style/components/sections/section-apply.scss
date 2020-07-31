@@ -308,6 +308,14 @@
       border-radius: 10px;
     }
 
+    .mouse-parallax__bg {
+      .img-parallax {
+        &:first-child {
+          height: 210px;
+          bottom: 53%;
+        }
+      }
+    }
   }
 }
 @include respond-to($xs) {

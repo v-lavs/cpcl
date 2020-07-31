@@ -472,8 +472,22 @@ $slider-top-offset: 200;
 }
 
 @include respond-to($xs) {
-  .section-how-works .description__item {
+  .section-how-works{
+    .description__item {
     font-size: 16px;
+  }
+    .mouse-parallax__bg {
+      .img-parallax {
+        &:first-child {
+          height: 147px;
+        }
+
+        &:nth-child(2) {
+          bottom: 49%;
+          height: 136px;
+        }
+      }
+    }
   }
 }
 
@@ -483,6 +497,7 @@ $slider-top-offset: 200;
     .section-bg_mobile .slider-additional-btns a {
       width: 25px;
       height: 25px;
+
       &:nth-child(2) {
         margin-bottom: -5px;
       }

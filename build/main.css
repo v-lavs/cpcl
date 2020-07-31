@@ -2943,6 +2943,11 @@ body {
     border-radius: 10px;
   }
 
+  .section-apply .mouse-parallax__bg .img-parallax:first-child {
+    height: 210px;
+    bottom: 53%;
+  }
+
   .section-information .swiper-slide {
     width: 320px;
   }
@@ -3065,6 +3070,15 @@ body {
 
   .section-how-works .description__item {
     font-size: 16px;
+  }
+
+  .section-how-works .mouse-parallax__bg .img-parallax:first-child {
+    height: 147px;
+  }
+
+  .section-how-works .mouse-parallax__bg .img-parallax:nth-child(2) {
+    bottom: 49%;
+    height: 136px;
   }
 
   .section-apply .images-list__item {
