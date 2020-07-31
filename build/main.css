@@ -2827,9 +2827,55 @@ body {
   .section-information .card-types__text {
     font-size: 18px;
   }
+
+  .section-information .swiper-slide {
+    width: 320px;
+  }
+
+  .section-information .swiper-slide .btn {
+    font-size: 20px;
+  }
+
+  .section-information .card-types__title {
+    font-size: 26px;
+  }
+
+  .section-information .counter-number {
+    font-size: 65px;
+  }
+
+  .section-information .card-types__heading,
+  .section-information .card-types__body {
+    padding: 0;
+  }
+
+  .section-information .card-types__text {
+    font-size: 18px;
+  }
 }
 
 @media screen and (max-width: 480px) {
+  .section-how-works .swiper-container {
+    padding-left: 20px;
+  }
+
+  .section-how-works .preparation-card__title {
+    min-height: 100px;
+  }
+
+  .section-how-works .preparation-card__description {
+    padding-left: 50px;
+    padding-right: 30px;
+  }
+
+  .section-how-works .description__item {
+    font-size: 20px;
+  }
+
+  .section-how-works .description__item:before {
+    left: -25px;
+  }
+
   .section-how-works .swiper-container {
     padding-left: 20px;
   }
@@ -2872,8 +2918,30 @@ body {
     font-size: 16px;
   }
 
+  .section-how-works .description__item {
+    font-size: 16px;
+  }
+
   .section-apply .images-list__item {
     width: 50%;
+  }
+
+  .section-how-take .section__text {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .section-how-take .take-list .swiper-slide {
+    padding: 0 50px;
+  }
+
+  .section-how-take .take-card {
+    margin-right: auto;
+    max-width: 240px;
+  }
+
+  .section-how-take .take-card__body {
+    font-size: 24px;
   }
 
   .section-how-take .section__text {
@@ -2923,6 +2991,47 @@ body {
     margin: 0 20px;
   }
 
+  .section-information .types-headache {
+    padding-left: 15px;
+  }
+
+  .section-information .section__text {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .section-information .section__title {
+    margin-bottom: 10px;
+  }
+
+  .section-information .title {
+    font-size: 24px;
+  }
+
+  .section-information .manifestations-pain {
+    font-size: 16px;
+  }
+
+  .section-information .manifestation__item:first-child .manifestations {
+    padding: 0 30px;
+  }
+
+  .section-information .manifestation__item .img-wrap {
+    margin: 0 20px;
+  }
+
+  .section-reasons .factors-list__item {
+    min-height: 75px;
+    font-size: 12px;
+    padding: 0 8px 15px;
+  }
+
+  .section-reasons .left-content,
+  .section-reasons .right-content {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
   .section-reasons .factors-list__item {
     min-height: 75px;
     font-size: 12px;
@@ -2947,9 +3056,26 @@ body {
   .header .main-logo {
     margin: 0 20px;
   }
+
+  .header .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .header .burger {
+    width: 35px;
+  }
+
+  .header .main-logo {
+    margin: 0 20px;
+  }
 }
 
 @media screen and (max-width: 380px) {
+  .section-information .manifestations-pain {
+    font-size: 14px;
+  }
+
   .section-information .manifestations-pain {
     font-size: 14px;
   }
