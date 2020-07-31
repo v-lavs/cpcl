@@ -3042,24 +3042,24 @@ body {
     font-size: 36px;
   }
 
-  .mouse-parallax__bg .img-parallax:first-child {
+  .section-banner .mouse-parallax__bg .img-parallax:first-child {
     height: 144px;
   }
 
-  .mouse-parallax__bg .img-parallax:nth-child(2) {
+  .section-banner .mouse-parallax__bg .img-parallax:nth-child(2) {
     height: 90px;
   }
 
-  .mouse-parallax__bg-2 .img-parallax:first-child {
+  .section-banner .mouse-parallax__bg-2 .img-parallax:first-child {
     display: none;
   }
 
-  .mouse-parallax__bg-2 .img-parallax:nth-child(2) {
+  .section-banner .mouse-parallax__bg-2 .img-parallax:nth-child(2) {
     height: 160px;
     left: 0;
   }
 
-  .mouse-parallax__bg-2 .img-parallax:nth-child(3) {
+  .section-banner .mouse-parallax__bg-2 .img-parallax:nth-child(3) {
     height: 100px;
   }
 
