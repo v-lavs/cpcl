@@ -66,8 +66,8 @@
         height: auto;
       }
       &:hover{
-        svg path{
-          stroke: #71229f;
+        svg {
+          fill: #71229f;
         }
       }
     }

@@ -1877,8 +1877,8 @@ body {
   height: auto;
 }
 
-.footer .social-bar__item:hover svg path {
-  stroke: #71229f;
+.footer .social-bar__item:hover svg {
+  fill: #71229f;
 }
 
 .footer .bottom-row {
