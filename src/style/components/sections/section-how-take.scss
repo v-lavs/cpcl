@@ -1,18 +1,29 @@
 .section-how-take {
+  position: relative;
   min-height: 700px;
   padding-bottom: 55px;
   padding-top: 60px;
   background-image: linear-gradient(to top, #dce3ef, #ffffff);
 
+  .wrap-pagination {
+    background-color: $white;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none;
+  }
+
   .section__title {
     text-transform: none;
+
     .medicament-name_middle {
       font-size: 0.85em;
       text-transform: uppercase;
     }
   }
 
-  .bg-section-top{
+  .bg-section-top {
     background-repeat: no-repeat;
     -webkit-background-size: 25%;
     background-size: 25%;
@@ -21,6 +32,7 @@
     display: flex;
     align-items: flex-end;
   }
+
   .block-content {
     max-width: 1500px;
     width: 100%;
@@ -33,6 +45,7 @@
     border-top: 2px solid $white;
     font-size: 26px;
     font-family: $helper-font;
+    padding-bottom: 55px;
   }
 
   .section__text {
@@ -133,12 +146,72 @@
 
 @include respond-to($md) {
   .section-how-take {
+    padding-bottom: 0;
+
+    .bg-section-top {
+      -webkit-background-size: 36%;
+      background-size: 36%;
+    }
+
     .take-card {
       margin-left: auto;
     }
-   .take-list .swiper-slide {
-     padding-right: 80px;
-   }
+
+    .take-list .swiper-slide {
+      padding-right: 80px;
+    }
+
+    .swiper-pagination {
+      position: absolute;
+      bottom: -30px !important;
+      left: 50%;
+      transform: translateX(-50%);
+
+      .swiper-pagination-bullet {
+        border: 1px solid #ababab !important;
+        background-color: $white;
+      }
+
+      .swiper-pagination-bullet-active:before {
+        background-color: #ababab !important;
+      }
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+      display: block;
+    }
+
+    .swiper-button-next.swiper-button-disabled,
+    .swiper-button-prev.swiper-button-disabled {
+      display: none;
+    }
+
+    .swiper-button-next, .swiper-container-rtl .swiper-button-prev {
+      right: 15px;
+    }
+
+    .swiper-button-next:after, .swiper-button-prev:after {
+      font-size: 50px;
+      color: #ff7500;
+      font-weight: 700;
+    }
+
+    .wrap-pagination {
+      padding-bottom: 30px;
+    }
   }
 }
 
+@include respond-to($sm) {
+  .section-how-take {
+    .bg-section-top {
+      -webkit-background-size: 59%;
+      background-size: 59%;
+      background-position: -22.5% bottom;
+    }
+    .section__text{
+      max-width: 85%;
+    }
+  }
+}

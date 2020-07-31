@@ -59,6 +59,10 @@ $slider-top-offset: 200;
     margin: 0 auto;
   }
 
+  .section-bg_mobile {
+    display: none;
+  }
+
   .preparations {
     margin: -200px auto 0;
     overflow: visible;
@@ -228,9 +232,20 @@ $slider-top-offset: 200;
 
 @include respond-to($md) {
   .section-how-works {
+
+    .helper-wrapper {
+      background-color: $white;
+    }
+
+    .swiper-wrapper {
+      padding-top: 15px;
+      padding-bottom: 15px;
+    }
+
     .preparation-card__description {
       font-size: 33px;
     }
+
     .preparation-card {
       &:nth-child(n) {
         .preparation-card__description {
@@ -238,13 +253,47 @@ $slider-top-offset: 200;
         }
       }
     }
+
+    .sub-title {
+      width: 75%;
+    }
   }
 }
 
 @include respond-to($sm) {
   .section-how-works {
+
+    .section-bg_desktop {
+      display: none;
+    }
+
+    .section-bg_mobile {
+      display: block;
+    }
+
     .preparation-card__description {
       font-size: 24px;
+    }
+
+    .sub-title {
+      width: 75%;
+      font-size: 19px;
+      font-weight: 400;
+      color: #666666;
+    }
+
+    .preparation-card__description {
+      padding: 35px 25px 20px 76px;
+    }
+
+    .description__item {
+      padding-top: 25px;
+      padding-bottom: 25px;
+    }
+
+    .description__item:before {
+      left: -35px;
+      top: 35px;
     }
   }
 }

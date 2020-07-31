@@ -66,8 +66,10 @@ $(document).ready(function () {
         if ($(window).width() <= 1040) {
             if (!bannerSlider) {
                 bannerSlider = new Swiper('.banner-slider', {
+
                     pagination: {
                         el: '.swiper-pagination',
+                        clickable: true,
                     }
                 });
             }
@@ -78,20 +80,37 @@ $(document).ready(function () {
                         767: {
                             slidesPerView: 2,
                         },
-                    }
+                    },
+                    pagination: {
+                        el: '.swiper-pagination',
+                        clickable: true,
+                    },
                 });
             }
             if (!headAcheTypesSlider) {
                 headAcheTypesSlider = new Swiper('#headAcheTypesSlider', {
                     slidesPerView: 'auto',
                     spaceBetween: 50,
+                    pagination: {
+                        el: '.swiper-pagination',
+                        clickable: true,
+                    },
+                    navigation: {
+                        nextEl: '.swiper-button-next',
+                        prevEl: '.swiper-button-prev',
+                    },
+
                 });
             }
             if (!preparationsSlider) {
                 preparationsSlider = new Swiper('#preparationsSlider', {
                     slidesPerView: 'auto',
                     spaceBetween: 50,
-                    loop: false
+                    loop: false,
+                    pagination: {
+                        el: '.helper-wrapper .swiper-pagination',
+                        clickable: true,
+                    },
                 });
             }
         } else {

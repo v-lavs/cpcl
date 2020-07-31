@@ -21,12 +21,15 @@
     .section__text {
       max-width: 665px;
     }
-
     .text-content {
       padding-left: 16.5%;
     }
-  }
 
+
+  }
+  .text-content_mobile {
+    display: none;
+  }
   .block-gradient-bg {
     background-image: linear-gradient(to right, #ffffff, transparent);
     padding: 55px 50px 55px 16.5%;
@@ -109,6 +112,8 @@
 
 @include respond-to($md) {
   .section-reasons {
+    padding-top: 0;
+    background-image: linear-gradient(to right top, #c5d1e3, #f9fafc, #ffffff);
     .left-content,
     .right-content {
       width: 100%;
@@ -129,20 +134,38 @@
     }
 
     .factors-list {
-      max-width: 480px;
+      max-width: 100%;
       margin: auto;
     }
-
-    .factors-list__item {
-      max-width: none;
+    .factors-list__item{
+      width: 30%;
     }
+    .text-content_mobile{
+      display: block;
+    }
+    .text-content{
+      display: none;
+    }
+
   }
 }
 
 @include respond-to($sm) {
   .section-reasons {
-    .factors-list__item {
-      width: 47.5%;
+    text-align: center;
+
+    .section__title {
+      margin-bottom: 20px;
+      font-size: 44px;
+    }
+
+    .factors-list{
+      max-width: 100%;
+    }
+
+    .wrap-icon {
+      -webkit-background-size: 40%;
+      background-size: 40%;
     }
   }
 }

@@ -107,3 +107,19 @@
     }
   }
 }
+
+@include respond-to($sm) {
+  .header {
+    .container {
+      padding: 30px 35px 20px;
+    }
+
+    .logo {
+      width: 140px;
+      height: 30px;
+    }
+    .main-logo{
+      margin-left: 70px;
+    }
+  }
+}

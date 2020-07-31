@@ -31,7 +31,7 @@
       }
       &:nth-child(3) {
         right: -1.5%;
-        bottom: 2%;
+        bottom: 4%;
         height: 650px;
       }
     }
@@ -78,4 +78,30 @@
 
 @include respond-to($md) {
 
+}
+@include respond-to($sm) {
+  .section-video{
+    .section__title{
+      font-size: 25px;
+      margin-bottom: 50px;
+    }
+    .mouse-parallax__bg{
+      .img-parallax {
+        &:nth-child(3) {
+          display: none;
+        }
+        &:first-child {
+          top: 5%;
+          left: -11%;
+          height: 436px;
+        }
+
+        &:nth-child(2) {
+          right: -12%;
+          top: 0%;
+          height: 426px;
+        }
+      }
+    }
+  }
 }

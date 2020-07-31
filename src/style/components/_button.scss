@@ -11,3 +11,9 @@
   line-height: 1.1;
   font-family: $secondary-fonts;
 }
+
+@include respond-to($sm) {
+  .btn{
+    font-size: 22px;
+  }
+}

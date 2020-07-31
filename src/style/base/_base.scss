@@ -31,11 +31,13 @@ body {
 
 .title-site,
 .section__title {
+  position: relative;
   font-family: $primary-fonts;
   font-style: italic;
   line-height: 1.1;
   color: #000000;
   text-transform: uppercase;
+  padding-left: 60px;
 }
 
 .title-site {
@@ -61,13 +63,14 @@ body {
 
 .section__heading {
   text-align: center;
+  margin: 0 auto;
 }
 
 .section__title {
   font-weight: 700;
   font-size: 40px;
   margin-bottom: 95px;
-
+  display: inline-block;
   &_big {
     font-size: 45px;
   }
@@ -81,23 +84,24 @@ body {
 
 .decor {
   display: inline-block;
-  position: relative;
-  padding-left: 45px;
-
-  &:before {
-    left: 0;
-    top: 36%;
-    position: absolute;
-    content: '';
+  width: 32px;
+  height: 24px;
+  background-color: transparent;
+  left: 0;
+  bottom: 50%;
+  transform: translateY(50%);
+  position: absolute;
+  z-index: 1;
+  .line {
     display: block;
-    width: 30px;
-    height: 22px;
-    z-index: 2;
-    background-image: url(../assets/img/decor.png);
-    background-repeat: no-repeat;
-    -webkit-background-size: cover;
-    background-size: cover;
-    background-position: center center;
+    width: 100%;
+    background-color: #bbbbbb;
+    height: 4px;
+    margin-bottom: 5px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 }
 
@@ -149,7 +153,7 @@ body {
 
   &_middle {
     font-weight: 500;
-    font-size: 50px;
+    font-size: 44px;
   }
 
   &_small {
@@ -181,20 +185,7 @@ body {
 }
 
 
-.swiper-pagination {
-  padding-top: 15px;
-  bottom: 0 !important;
 
-
-  .swiper-pagination-bullet {
-    width: 20px;
-    height: 20px;
-  }
-}
-
-.swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
-  margin: 0 12px;
-}
 
 @media screen and (max-width: 1200px) {
   .title-site {
@@ -225,12 +216,19 @@ body {
 
 @include respond-to($sm) {
   .section__title {
-    font-size: 28px;
+    font-size: 45px;
+    padding-left: 50px;
   }
   .medicament-name_middle {
-    font-size: 32px;
+    font-size: 45px;
   }
   .section__text {
     font-size: 18px;
+  }
+  .title-site_mobile{
+    font-size: 25px;
+  }
+  .decor{
+    width: 35px;
   }
 }

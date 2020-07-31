@@ -1,11 +1,30 @@
 .footer {
-
+  position: relative;
+  .link-contact {
+    position: absolute;
+    display: inline-block;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 12px;
+    font-weight: 400;
+    left: -100%;
+    z-index: 2;
+    span {
+      display: inline-block;
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 0.5;
+      vertical-align: middle;
+      font-family: $primary-fonts;
+      margin-left: 10px;
+    }
+  }
   .top-row {
     margin-bottom: 45px;
     display: flex;
     justify-content: space-between;
     background-image: linear-gradient(to bottom, #e5e5e5, #fbfbfb);
-    padding: 20px 90px 24vh;
+    padding: 20px 90px 20vh;
 
     .logo {
       width: 134px;
@@ -19,30 +38,31 @@
       font-weight: 700;
     }
 
-    .link-contact {
-      position: absolute;
-      display: inline-block;
-      top: 50%;
-      transform: translateY(-50%);
-      font-size: 12px;
-      font-weight: 400;
-      left: -100%;
+    //.link-contact {
+    //  position: absolute;
+    //  display: inline-block;
+    //  top: 50%;
+    //  transform: translateY(-50%);
+    //  font-size: 12px;
+    //  font-weight: 400;
+    //  left: -100%;
+    //  z-index: 2;
 
-      span {
-        display: inline-block;
-        font-size: 20px;
-        font-weight: 500;
-        line-height: 0.5;
-        vertical-align: middle;
-        font-family: $primary-fonts;
-        margin-left: 10px;
-      }
-    }
+      //span {
+      //  display: inline-block;
+      //  font-size: 20px;
+      //  font-weight: 500;
+      //  line-height: 0.5;
+      //  vertical-align: middle;
+      //  font-family: $primary-fonts;
+      //  margin-left: 10px;
+      //}
+    //}
 
-    .heading {
-      position: relative;
-      padding: 0 30px;
-    }
+    //.heading {
+    //  position: relative;
+    //  padding: 0 30px;
+    //}
   }
 
   .social-bar {
@@ -76,6 +96,7 @@
       width: 90%;
       margin: 0 auto;
       text-align: center;
+
       a {
         color: inherit;
         display: inline-block;
@@ -85,7 +106,7 @@
 }
 
 .disclaimer {
-  padding: 30px 5.5% 38px;
+  padding: 30px 5.5% 33px;
   width: 100%;
   background-color: $white;
   position: fixed;
@@ -101,3 +122,11 @@
   }
 }
 
+@include respond-to($md) {
+  .footer {
+    .top-row {
+      background-image: none;
+      background-color: $white;
+    }
+  }
+}

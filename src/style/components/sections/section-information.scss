@@ -198,13 +198,14 @@
 
   .mouse-parallax__bg {
     .img-parallax {
-      &:nth-child(1) {
-        bottom: -0.5%;
-        left: 0;
-        height: 180px;
-      }
-
+      bottom: -0.5%;
+      left: 0;
+      height: 180px;
     }
+  }
+
+  .section-bg_mobile {
+    display: none;
   }
 }
 
@@ -314,9 +315,7 @@
 
     .mouse-parallax__bg {
       .img-parallax {
-        &:nth-child(1) {
-          height: 160px;
-        }
+        height: 160px;
       }
     }
   }
@@ -326,11 +325,13 @@
   .section-information {
     padding-bottom: 100px;
 
+    .types-headache {
+      width: 88%;
+    }
+
     .mouse-parallax__bg {
       .img-parallax {
-        &:nth-child(1) {
-          bottom: 1%;
-        }
+        bottom: 1%;
       }
     }
   }
@@ -346,14 +347,57 @@
         min-width: 300px;
       }
     }
+
+    .section-bg_mobile {
+      display: block;
+    }
+
+    .section-bg_desktop {
+      display: none;
+    }
   }
+
 }
 
 @include respond-to($sm) {
   .section-information {
+    padding-top: 60px;
+
     &,
     & .section__text {
       font-size: 18px;
+    }
+
+    .manifestations-pain {
+      padding-top: 20px;
+      font-size: 22px;
+    }
+
+    .types-headache .card-types {
+      padding-bottom: 60px;
+    }
+
+    .card-types__text {
+      font-size: 22px;
+      font-weight: 300;
+    }
+
+    .card-types__title {
+      font-size: 34px;
+    }
+
+    .counter-number {
+      font-size: 85px;
+    }
+
+    .mouse-parallax__bg {
+      display: none;
+    }
+
+    .section__text {
+      max-width: 75%;
+      font-size: 22px;
+      font-weight: 700;
     }
   }
 }

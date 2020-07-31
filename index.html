@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ua">
 <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Cpl</title>
     <!--fonts-->
@@ -149,9 +149,13 @@
             </div>
             <div class="mouse-parallax__content">
                 <div class="section__heading">
-                    <h2 class="section__title decor">
+                    <h2 class="section__title"><span class="decor">
+                            <span class="line"></span>
+                            <span class="line"></span>
+                            <span class="line"></span>
+                        </span>
                         Як діє <span class="medicament-name medicament-name_middle">Копацил<sup
-                            class="registered">&reg;</sup></span>
+                                class="registered">&reg;</sup></span>
                     </h2>
                 </div>
                 <div class="sub-title text_middle">
@@ -160,7 +164,8 @@
                     аналгетичні знеболювальні препарати або їх комбінації.
                 </div>
                 <div class="bg-gray ">
-                    <img class="section-bg" src="assets/img/krug-bez-risok.png" alt="">
+                    <img class="section-bg section-bg_desktop" src="assets/img/krug-bez-risok.png" alt="">
+                    <img class="section-bg section-bg_mobile" src="assets/img/mob-krug.png" alt="">
                     <div class="swiper-container preparations" id="preparationsSlider">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide preparation-card">
@@ -204,6 +209,8 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- Add Pagination -->
+                        <div class="swiper-pagination"></div>
                     </div>
                 </div>
             </div>
@@ -216,7 +223,12 @@
             </div>
             <div class="mouse-parallax__content">
                 <div class="section__heading">
-                    <h2 class="section__title decor">
+                    <h2 class="section__title">
+                        <span class="decor">
+                            <span class="line"></span>
+                            <span class="line"></span>
+                            <span class="line"></span>
+                        </span>
                         КОЛИ ЗАСТОСОВУЮТЬ <span class="medicament-name medicament-name_middle">Копацил<sup
                             class="registered">&reg;</sup></span>
                     </h2>
@@ -293,60 +305,73 @@
         </section>
 
         <section class="section section-how-take">
+
             <div class="bg-section-top" style="background-image: url(assets/img/bg55.png);">
                 <div class="container">
                     <div class="block-content">
                         <div class="section__heading">
-                            <h2 class="section__title decor text_large">
+                            <h2 class="section__title text_large"><span class="decor">
+                            <span class="line"></span>
+                            <span class="line"></span>
+                            <span class="line"></span>
+                        </span>
                                 Як приймають <span class="medicament-name medicament-name_middle">Копацил<sup
-                                    class="registered">&reg;</sup></span>
+                                        class="registered">&reg;</sup></span>
                             </h2>
                         </div>
-                        <div class="swiper-container take-list" id="instructionSlider">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <div class="take-card">
-                                        <div class="take-card__top-content"
-                                             style="background-image: url(assets/img/taking-pills.png);">
+
+                            <div class="swiper-container take-list" id="instructionSlider">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="take-card">
+                                            <div class="take-card__top-content"
+                                                 style="background-image: url(assets/img/taking-pills.png);">
+                                            </div>
+                                            <div class="take-card__body">
+                                                КОПАЦИЛ<sup class="registered">&reg;</sup> застосовують внутрішньо після
+                                                їжі
+                                            </div>
                                         </div>
-                                        <div class="take-card__body">
-                                            КОПАЦИЛ<sup class="registered">&reg;</sup> застосовують внутрішньо після їжі
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="take-card">
+                                            <div class="take-card__top-content"
+                                                 style="background-image: url(assets/img/za1.png);">
+                                            </div>
+                                            <div class="take-card__body">
+                                                По 1 таблетці КОПАЦИЛ<sup class="registered">&reg;</sup> <span
+                                                    class="color-orange">2-3</span> рази на добу
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="take-card">
+                                            <div class="take-card__top-content"
+                                                 style="background-image: url(assets/img/za6.png);">
+                                            </div>
+                                            <div class="take-card__body">
+                                                Максимальна добова доза – 6 таблеток (за 3 прийоми)
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="take-card">
+                                            <div class="take-card__top-content"
+                                                 style="background-image: url(assets/img/za4a.png);">
+                                            </div>
+                                            <div class="take-card__body">
+                                                Інтервали між прийомами 4 години
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="swiper-slide">
-                                    <div class="take-card">
-                                        <div class="take-card__top-content"
-                                             style="background-image: url(assets/img/za1.png);">
-                                        </div>
-                                        <div class="take-card__body">
-                                            По 1 таблетці КОПАЦИЛ<sup class="registered">&reg;</sup> <span
-                                                class="color-orange">2-3</span> рази на добу
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="take-card">
-                                        <div class="take-card__top-content"
-                                             style="background-image: url(assets/img/za6.png);">
-                                        </div>
-                                        <div class="take-card__body">
-                                            Максимальна добова доза – 6 таблеток (за 3 прийоми)
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="take-card">
-                                        <div class="take-card__top-content"
-                                             style="background-image: url(assets/img/za4a.png);">
-                                        </div>
-                                        <div class="take-card__body">
-                                            Інтервали між прийомами 4 години
-                                        </div>
-                                    </div>
-                                </div>
+                                <!-- Add Arrows -->
+                                <div class="swiper-button-next"></div>
+                                <div class="swiper-button-prev"></div>
                             </div>
-                        </div>
+                            <!-- Add Pagination -->
+                            <div class="swiper-pagination"></div>
+
                     </div>
                 </div>
             </div>
@@ -357,6 +382,7 @@
                     <span class="color-orange">3</span> дні - як жарознижувального засобу.
                 </p>
             </div>
+            <div class="wrap-pagination"></div>
         </section>
 
         <section class="section section-video mouse-parallax">
@@ -366,11 +392,13 @@
                 <img src="assets/img/object-v-37.png" alt="" class="img-parallax">
             </div>
             <div class="mouse-parallax__content">
-                <h2 class="section__title section__title_big text_center color-gray">
+                <div class="section__heading">
+                    <h2 class="section__title section__title_big text_center color-gray">
                 <span class="medicament-name medicament-name_middle">Копацил<sup
                         class="registered">&reg;</sup></span><br>
-                    Викинь біль із голови!
-                </h2>
+                        Викинь біль із голови!
+                    </h2>
+                </div>
                 <div class="wrap-video">
                     <video src="assets/video/" type="video/mp4" controls
                            poster="assets/img/poster.jpg"
@@ -386,7 +414,11 @@
             </div>
             <div class="container mouse-parallax__content">
                 <div class="section__heading">
-                    <h2 class="section__title decor">ГОЛОВНИЙ БІЛЬ</h2>
+                    <h2 class="section__title"><span class="decor">
+                            <span class="line"></span>
+                            <span class="line"></span>
+                            <span class="line"></span>
+                        </span>ГОЛОВНИЙ БІЛЬ</h2>
                 </div>
                 <h3 class="title color-gray">Головний біль може:</h3>
 
@@ -474,6 +506,8 @@
                             </div>
                         </div>
                     </div>
+                    <!-- Add Pagination -->
+                    <div class="swiper-pagination"></div>
                 </div>
 
                 <p class="section__text">
@@ -571,12 +605,23 @@
                             </li>
                         </ul>
                     </div>
+                    <div class="text-content_mobile">
+                        <p class="section__text">
+                            Використання знеболювальних препаратів(таких як КОПАЦИЛ®) є зручним і швидким способом
+                            полегшення головного болю.
+                        </p>
+                        <p class="section__text">
+                            А здоровий спосіб життя, помірні фізичні навантаження, якісний сон і
+                            вправи на розслаблення можуть допомогти запобігти новим його проявам <sup>6</sup>
+                        </p>
+                    </div>
                 </div>
             </div>
         </section>
 
     </main>
     <footer class="footer">
+        <a href="#" class="link-contact">показати джерела <span>></span></a>
         <div class="top-row">
             <ul class="social-bar">
                 <li class="social-bar__item">
@@ -600,10 +645,10 @@
                     </a>
                 </li>
             </ul>
-            <div class="heading">
-                <a href="#" class="link-contact">показати джерела <span>></span></a>
+            <!--<div class="heading">-->
+                <!--<a href="#" class="link-contact">показати джерела <span>></span></a>-->
                 <h3 class="footer__title">контакти</h3>
-            </div>
+            <!--</div>-->
             <a href="#" class="logo">
                 <img src="assets/img/arterium1.svg" alt="Копацил" class="img img-logo">
             </a>
