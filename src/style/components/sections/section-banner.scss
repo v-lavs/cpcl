@@ -56,9 +56,8 @@
     display: flex;
     align-items: center;
     min-height: 70px;
-    background:
-            linear-gradient(#fff,#fff) padding-box,
-            linear-gradient(45deg, #666666, #eeeeee, #666666,#eeeeee, #666666 ) border-box;
+    background: linear-gradient(#fff, #fff) padding-box,
+    linear-gradient(45deg, #666666, #eeeeee, #666666, #eeeeee, #666666) border-box;
     border: 1.5px solid transparent;
     padding: 10px 30px 10px 70px;
     width: 100%;
@@ -79,7 +78,7 @@
 
   .advantage {
     position: relative;
-    background-image: linear-gradient(to right top, #666666, #eeeeee, #666666,#eeeeee, #666666 );
+    background-image: linear-gradient(to right top, #666666, #eeeeee, #666666, #eeeeee, #666666);
     padding: 5px;
     border-radius: 50%;
     width: 98px;
@@ -159,6 +158,41 @@
       }
     }
   }
+
+  .where-buy {
+    width: 120px;
+    height: 120px;
+    background-color: white;
+    box-shadow: 0 0 10px 0 rgba(53, 119, 230, 0.5);
+    position: absolute;
+    z-index: 2;
+    border-radius: 50%;
+    right: 28px;
+    top: 110px;
+    padding: 16px 16px 4%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: none;
+
+    .text {
+      display: inline-block;
+      font-size: 17px;
+      font-family: "Roboto", sans-serif;
+      color: #010101;
+      font-weight: bold;
+      font-style: italic;
+      line-height: 0.8;
+    }
+
+    .img-icon {
+      width: 64%;
+      height: auto;
+      display: inline-block;
+      margin-bottom: 6px;
+    }
+  }
+
 }
 
 @media screen and (max-width: 1610px) {
@@ -278,6 +312,10 @@
     padding-bottom: 0;
     padding-top: 115px;
 
+    .where-buy {
+      display: flex;
+    }
+
     .swiper-container {
       padding-bottom: 0;
     }
@@ -389,6 +427,19 @@
   .section-banner {
     padding-top: 90px;
 
+    .where-buy {
+      width: 100px;
+      height: 100px;
+      justify-content: flex-start;
+      padding-bottom: 16px;
+      right: 15px;
+      top: 105px;
+
+      .text {
+        font-size: 14px;
+      }
+    }
+
     .mouse-parallax__bg {
       .img-parallax {
         &:first-child {
@@ -422,8 +473,40 @@
   }
 }
 
-@include  respond-to($xs){
+@media screen and (max-width: 600px){
   .section-banner{
+    .where-buy {
+      width: 75px;
+      height: 75px;
+      justify-content: center;
+      padding: 5px;
+
+      .img-icon {
+        width: 60%;
+        margin-bottom: 4px;
+      }
+
+      .text {
+        font-size: 10px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 500px){
+  .section-banner{
+    .where-buy {
+      width: 40px;
+      height: 40px;
+      right: 10px;
+      top: 125px;
+      .text {
+        display: none;
+      }
+    }
+  }
+}
+@include respond-to($xs) {
+  .section-banner {
     .mouse-parallax__bg {
       .img-parallax {
         &:first-child {
