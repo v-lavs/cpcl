@@ -65,6 +65,11 @@
         width: 100%;
         height: auto;
       }
+      &:hover{
+        svg path{
+          stroke: #71229f;
+        }
+      }
     }
   }
 

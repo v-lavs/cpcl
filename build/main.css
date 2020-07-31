@@ -1877,6 +1877,10 @@ body {
   height: auto;
 }
 
+.footer .social-bar__item:hover svg path {
+  stroke: #71229f;
+}
+
 .footer .bottom-row {
   display: none;
   width: 90%;
