@@ -1,0 +1,81 @@
+
+.popup {
+  max-width: 600px;
+  width: 100%;
+  min-height: 350px;
+  background-image: linear-gradient(to right top, #fda47d, #ffe17f);
+  -webkit-box-shadow: 0 12px 20px 5px rgba(253, 164, 125, 0.35);
+  box-shadow: 0 12px 20px 5px rgba(253, 164, 125, 0.35);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  z-index: 1100;
+  padding: 5px;
+  font-family: $secondary-fonts;
+}
+.popup-blue{
+  background-image: linear-gradient(to right top, #7fdbfa, #81c6ff);
+  -webkit-box-shadow: 0 12px 20px 5px rgba(129, 198, 255, 0.35);
+  box-shadow: 0 12px 20px 5px rgba(129, 198, 255, 0.35);
+}
+.popup-purple{
+  background-image: linear-gradient(to right top, #8987fc, #a48aff);
+  -webkit-box-shadow: 0 12px 20px 5px rgba(164, 135, 255, 0.35);
+  box-shadow: 0 12px 20px 5px rgba(164, 135, 255, 0.35);
+}
+.popup.active {
+  display: block;
+}
+.popup .popup-header {
+  background: #fff;
+  padding: 30px;
+  color: #000;
+  text-transform: uppercase;
+  text-align: center;
+  position: relative;
+
+}
+.popup .popup-content {
+  padding: 50px 50px 25px;
+  background-color: #fff;
+}
+.popup-close {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 33px;
+  right: 30px;
+  cursor: pointer;
+  display: block;
+
+}
+.popup .popup-title{
+  color: #f46a00;
+}
+.popup .popup-title-blue{
+  color: #1cadff;
+}
+
+.popup .popup-title-purple{
+  color: #8f41e3;
+}
+#overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #000;
+  opacity: .5;
+  z-index: 1000;
+}
+
+@include respond-to($sm) {
+  .popup{
+    width: 70%;
+  }
+}
+

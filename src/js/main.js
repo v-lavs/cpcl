@@ -171,6 +171,39 @@ $(document).ready(function () {
     $('.contact__toggle').click(function(e) {
         $('.footer .bottom-row').toggle()
     });
+
+
+    //POPUP
+    jQuery("#popup-trigger").click(function(e) {
+        e.preventDefault(),
+            jQuery("#popup").addClass("active"),
+            jQuery("#overlay").fadeIn(),
+            jQuery("#popup-close, #overlay").click(function(e) {
+                e.preventDefault(),
+                    jQuery("#popup").removeClass("active"),
+                    jQuery("#overlay").fadeOut()
+            })
+    });
+    jQuery("#popup-blue-trigger").click(function(e) {
+        e.preventDefault(),
+            jQuery("#popup-blue").addClass("active"),
+            jQuery("#overlay").fadeIn(),
+            jQuery("#popup-blue-close, #overlay").click(function(e) {
+                e.preventDefault(),
+                    jQuery("#popup-blue").removeClass("active"),
+                    jQuery("#overlay").fadeOut()
+            })
+    });
+    jQuery("#popup-purple-trigger").click(function(e) {
+        e.preventDefault(),
+            jQuery("#popup-purple").addClass("active"),
+            jQuery("#overlay").fadeIn(),
+            jQuery("#popup-purple-close, #overlay").click(function(e) {
+                e.preventDefault(),
+                    jQuery("#popup-purple").removeClass("active"),
+                    jQuery("#overlay").fadeOut()
+            })
+    });
 });
 
 

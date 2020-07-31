@@ -352,8 +352,8 @@ body {
   display: flex;
   align-items: center;
   min-height: 70px;
-  border: 1px solid #cccccc;
-  background-color: #fff;
+  background: linear-gradient(#fff, #fff) padding-box, linear-gradient(45deg, #666666, #eeeeee, #666666, #eeeeee, #666666) border-box;
+  border: 1.5px solid transparent;
   padding: 10px 30px 10px 70px;
   width: 100%;
   border-radius: 0 2em 2em 0;
@@ -373,7 +373,7 @@ body {
 
 .section-banner .advantage {
   position: relative;
-  background-image: -webkit-radial-gradient(circle, white, black);
+  background-image: linear-gradient(to right top, #666666, #eeeeee, #666666, #eeeeee, #666666);
   padding: 5px;
   border-radius: 50%;
   width: 98px;
@@ -387,9 +387,9 @@ body {
   width: 88px;
   height: 88px;
   border-radius: 50%;
-  -webkit-box-shadow: 0 0 0 5px white;
-  -moz-box-shadow: 0 0 0 5px white;
-  box-shadow: 0 0 0 5px white;
+  -webkit-box-shadow: 0 0 0 4px white;
+  -moz-box-shadow: 0 0 0 4px white;
+  box-shadow: 0 0 0 4px white;
 }
 
 .section-banner .substrate_purlpe {
@@ -1566,6 +1566,87 @@ body {
 
 .swiper-container {
   padding-bottom: 30px;
+}
+
+.popup {
+  max-width: 600px;
+  width: 100%;
+  min-height: 350px;
+  background-image: linear-gradient(to right top, #fda47d, #ffe17f);
+  -webkit-box-shadow: 0 12px 20px 5px rgba(253, 164, 125, 0.35);
+  box-shadow: 0 12px 20px 5px rgba(253, 164, 125, 0.35);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  z-index: 1100;
+  padding: 5px;
+  font-family: "Affect", sans-serif;
+}
+
+.popup-blue {
+  background-image: linear-gradient(to right top, #7fdbfa, #81c6ff);
+  -webkit-box-shadow: 0 12px 20px 5px rgba(129, 198, 255, 0.35);
+  box-shadow: 0 12px 20px 5px rgba(129, 198, 255, 0.35);
+}
+
+.popup-purple {
+  background-image: linear-gradient(to right top, #8987fc, #a48aff);
+  -webkit-box-shadow: 0 12px 20px 5px rgba(164, 135, 255, 0.35);
+  box-shadow: 0 12px 20px 5px rgba(164, 135, 255, 0.35);
+}
+
+.popup.active {
+  display: block;
+}
+
+.popup .popup-header {
+  background: #fff;
+  padding: 30px;
+  color: #000;
+  text-transform: uppercase;
+  text-align: center;
+  position: relative;
+}
+
+.popup .popup-content {
+  padding: 50px 50px 25px;
+  background-color: #fff;
+}
+
+.popup-close {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 33px;
+  right: 30px;
+  cursor: pointer;
+  display: block;
+}
+
+.popup .popup-title {
+  color: #f46a00;
+}
+
+.popup .popup-title-blue {
+  color: #1cadff;
+}
+
+.popup .popup-title-purple {
+  color: #8f41e3;
+}
+
+#overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #000;
+  opacity: .5;
+  z-index: 1000;
 }
 
 .burger {
@@ -2760,6 +2841,10 @@ body {
 
   .btn {
     font-size: 22px;
+  }
+
+  .popup {
+    width: 70%;
   }
 
   .header .container {
