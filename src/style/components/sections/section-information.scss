@@ -504,3 +504,73 @@
   }
 }
 
+@media screen and (max-width: 580px) {
+  .section-information {
+    .swiper-slide {
+      width: 320px;
+
+      .btn {
+        font-size: 20px;
+      }
+    }
+
+    .card-types__title {
+      font-size: 26px;
+    }
+
+    .counter-number {
+      font-size: 65px;
+    }
+
+    .card-types__heading,
+    .card-types__body {
+      padding: 0;
+    }
+
+    .card-types__text {
+      font-size: 18px;
+    }
+  }
+}
+
+@include respond-to($xs) {
+  .section-information {
+    .types-headache {
+      padding-left: 15px;
+    }
+
+    .section__text {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+
+    .section__title {
+      margin-bottom: 10px;
+    }
+
+    .title {
+      font-size: 24px;
+    }
+
+    .manifestations-pain {
+      font-size: 16px;
+    }
+
+    .manifestation__item:first-child .manifestations {
+      padding: 0 30px;
+    }
+
+    .manifestation__item .img-wrap {
+      margin: 0 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .section-information {
+    .manifestations-pain {
+      font-size: 14px;
+    }
+  }
+}
+

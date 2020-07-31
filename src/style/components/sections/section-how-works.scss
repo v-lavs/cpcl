@@ -456,3 +456,31 @@ $slider-top-offset: 200;
     font-size: 16px;
   }
 }
+@media screen and (max-width: 480px) {
+  .section-how-works {
+    .swiper-container {
+      padding-left: 20px;
+    }
+    .preparation-card__title {
+      min-height: 100px;
+    }
+    .preparation-card__description {
+      padding-left: 50px;
+      padding-right: 30px;
+    }
+
+    .description__item {
+      font-size: 20px;
+
+      &:before {
+        left: -25px;
+      }
+    }
+  }
+}
+
+@include respond-to($xs) {
+  .section-how-works .description__item {
+    font-size: 16px;
+  }
+}

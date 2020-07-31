@@ -249,3 +249,26 @@
     }
   }
 }
+
+@include respond-to($xs) {
+  .section-how-take {
+    .section__text {
+
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+
+    .take-list .swiper-slide {
+      padding: 0 50px;
+    }
+
+    .take-card {
+      margin-right: auto;
+      max-width: 240px;
+    }
+
+    .take-card__body {
+      font-size: 24px;
+    }
+  }
+}
