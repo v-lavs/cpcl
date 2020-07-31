@@ -401,6 +401,8 @@
       }
     }
 
+
+
     .card-types:after {
       height: 9px;
     }
@@ -475,7 +477,14 @@
         font-size: 20px;
       }
     }
+    .card-types {
+      transition: .35s;
 
+      &:hover {
+        transform: translateY(0px);
+        transition: .35s;
+      }
+    }
     .card-types__title {
       font-size: 26px;
     }

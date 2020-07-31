@@ -1155,6 +1155,36 @@ body {
   margin: 0 30px;
 }
 
+.section-information .manifestation__item .img-wrap:last-child:before {
+  transform: translateY(-50%) rotate(-15deg);
+  left: -20px;
+}
+
+.section-information .manifestation__item .img-wrap:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 5px;
+  height: 100vh;
+  background: linear-gradient(0deg, #0da9f9 0%, #604fd0 100%);
+  opacity: 0;
+  -webkit-transition: .35s;
+  -moz-transition: .35s;
+  -ms-transition: .35s;
+  -o-transition: .35s;
+  transition: .35s;
+}
+
+.section-information .manifestation__item .img-wrap:first-child:before {
+  transform: translateY(-50%) rotate(15deg);
+  right: -20px;
+}
+
+.section-information .manifestation__item .img-wrap.rotate-img:before {
+  right: -10px;
+  left: auto;
+}
+
 .section-information .manifestation__item .img-wrap img {
   display: inline-block;
   width: 30px;
@@ -2921,6 +2951,15 @@ body {
     font-size: 20px;
   }
 
+  .section-information .card-types {
+    transition: .35s;
+  }
+
+  .section-information .card-types:hover {
+    transform: translateY(0px);
+    transition: .35s;
+  }
+
   .section-information .card-types__title {
     font-size: 26px;
   }
@@ -3001,6 +3040,27 @@ body {
 
   .medicament-name_middle {
     font-size: 36px;
+  }
+
+  .mouse-parallax__bg .img-parallax:first-child {
+    height: 144px;
+  }
+
+  .mouse-parallax__bg .img-parallax:nth-child(2) {
+    height: 90px;
+  }
+
+  .mouse-parallax__bg-2 .img-parallax:first-child {
+    display: none;
+  }
+
+  .mouse-parallax__bg-2 .img-parallax:nth-child(2) {
+    height: 160px;
+    left: 0;
+  }
+
+  .mouse-parallax__bg-2 .img-parallax:nth-child(3) {
+    height: 100px;
   }
 
   .section-how-works .description__item {

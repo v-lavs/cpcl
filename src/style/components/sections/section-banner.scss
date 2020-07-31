@@ -421,3 +421,36 @@
     }
   }
 }
+
+@include  respond-to($xs){
+  .mouse-parallax__bg {
+    .img-parallax {
+      &:first-child {
+        height: 144px;
+      }
+
+      &:nth-child(2) {
+        height: 90px;
+      }
+    }
+  }
+
+  .mouse-parallax__bg-2 {
+    .img-parallax {
+
+      &:first-child {
+        display: none;
+      }
+
+      &:nth-child(2) {
+        height: 160px;
+        left: 0;
+      }
+
+      &:nth-child(3) {
+        height: 100px;
+
+      }
+    }
+  }
+}
