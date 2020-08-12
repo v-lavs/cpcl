@@ -2,7 +2,7 @@
  *To include js file from libraries write: `//= include ./path-to-file`
  * */
 
-//= include ../lib/jquery-3.3.1.min.js
+
 
 /**
  * CUSTOM SCRIPTS
@@ -43,17 +43,19 @@ $(document).ready(function () {
 
     // PARALAX
     $('.mouse-parallax').on('mousemove', (e) => {
-        const x = e.pageX / $(window).width();
-        const y = e.pageY / $(window).height();
+        const x = e.clientX / $(window).width();
+        const y = e.clientY / $(window).height();
+        const $activeSection = $(e.currentTarget);
+        console.log($activeSection);
+        $activeSection.find('.mouse-parallax__bg').css(
+            'transform',
+            'translate(-' + x * 25 + 'px, -' + y * 15 + 'px)'
+        );
+        $activeSection.find('.mouse-parallax__bg-2').css(
+            'transform',
+            'translate(-' + x * 50 + 'px, -' + y * 30 + 'px)'
+        );
 
-        $('.mouse-parallax__bg').css(
-            'transform',
-            'translate(-' + x * 35 + 'px, -' + y * 25 + 'px)'
-        );
-        $('.mouse-parallax__bg-2').css(
-            'transform',
-            'translate(-' + x * 50 + 'px, -' + y * 50 + 'px)'
-        );
     });
 
     // Banner slider
