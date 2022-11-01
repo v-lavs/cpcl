@@ -9,7 +9,7 @@
   "author": "vLavs",
   "license": "ISC",
   "devDependencies": {
-    "gulp": "3.9.1",
+    "gulp": "4.0.2",
     "gulp-autoprefixer": "4.1.0",
     "gulp-group-css-media-queries": "^1.2.2",
     "gulp-include": "2.3.1",
